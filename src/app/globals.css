@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #0d2038;
   --foreground: #171717;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -17,10 +17,94 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hamburger {
+  width: 28px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    top 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+/* Open state */
+
+.hamburger.open span:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.hamburger.open span:nth-child(2) {
+  top: 9px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.hamburger.open span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.hamburger.open span {
+  background-color: #fff;
+}
+
+.overlay {
+  height: 100dvh;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  padding-top: 3rem;
+}
+
+.overlay.active {
+  display: none;
+}
+
+.logo {
+  display: block;
+  z-index: 2000;
+  position: relative;
+}
+
+.logo.active {
+  display: none;
 }
