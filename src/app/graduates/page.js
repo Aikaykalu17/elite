@@ -1,3 +1,5 @@
+import GraduatesList from "../components/GraduatesList";
+
 function page() {
   return (
     <section className="w-full mt-24">
@@ -7,7 +9,9 @@ function page() {
           Our Pride. Our Future.
         </p>
       </div>
-      <div className="bg-white"></div>
+      <div className="bg-white rounded-l-md rounded-r-md">
+        <GraduatesList />
+      </div>
     </section>
   );
 }
