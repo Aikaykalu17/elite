@@ -1,14 +1,7 @@
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
-
 import { Manrope } from "next/font/google";
 
 import "./globals.css";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import AboutPreview from "./components/AboutPreview";
-import FeaturedGraduates from "./components/FeaturedGraduates";
-import UpcomingTrial from "./components/UpcomingTrial";
+import HeaderWrapper from "./components/HeadWrapper";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -24,15 +17,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col w-full items-center">
-        <Navbar />
-
-        <Hero />
-        <Stats />
-        <AboutPreview />
-        <FeaturedGraduates />
-        <UpcomingTrial />
+        <HeaderWrapper />
         {children}
-        <Footer />
       </body>
     </html>
   );

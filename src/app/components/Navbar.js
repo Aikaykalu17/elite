@@ -24,14 +24,14 @@ function Navbar() {
   const mobileMenuId = "mobile-navigation";
 
   return (
-    <nav className="bg-[#061426] rounded-4xl shadow-2xs mt-4 flex justify-between items-center h-20 w-full">
+    <nav className="bg-[#061426] rounded-4xl shadow-2xs mt-2 flex justify-between items-center h-20 w-full  fixed left-0 top-0 z-50">
       <div className="w-[90%] mx-auto flex justify-between items-center">
         <div>
           <Image
-            src="/EliteNavBar.svg"
+            src="/eliteBgTrns.webp"
             alt="Elite Football Club All Stars logo"
             width={100}
-            height={100}
+            height={150}
             priority
             // className="w-24 h-24"
           />

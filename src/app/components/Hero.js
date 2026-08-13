@@ -3,10 +3,10 @@
 function Hero() {
   return (
     <section
-      className="relative w-full h-125 bg-cover bg-center flex flex-col justify-center gap-4 px-4"
+      className="relative w-full h-125 bg-cover bg-center flex flex-col justify-center gap-4 px-4 mt-24"
       style={{ backgroundImage: "url('/images/EliteFootballer.webp')" }}
     >
-      <div>
+      <div className="w-full">
         <h1 className="text-5xl font-bold text-white leading-14">
           BUILDING CHAMPIONS <br />
           <span className="text-[#F5B800]">

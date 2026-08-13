@@ -1,4 +1,5 @@
 import { FaRegCalendarAlt, FaQuoteLeft } from "react-icons/fa";
+import Image from "next/image";
 
 function UpcomingTrial() {
   const year = new Date().getFullYear();
@@ -40,13 +41,30 @@ function UpcomingTrial() {
         className="bg-slate-200 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl"
         aria-labelledby="testimonials"
       >
-        <h2 className="testimonials">PARENT TESTIMONIAL</h2>
-        <article>
-          <blockquote className="text-gray-600 flex">
+        <h2 id="testimonials" className="font-bold">
+          PARENT TESTIMONIAL
+        </h2>
+        <article className="flex flex-col gap-6">
+          <blockquote className="text-gray-600 flex gap-4">
             <FaQuoteLeft size={50} color="#F5B800" />
-            &quot; Elite Football Club All Stars didn&apos;t just improve my
-            son&apos;s game; it shaped his character and discipline.&quot;
+            Elite Football Club All Stars didn&apos;t just improve my son&apos;s
+            game; it shaped his character and discipline.
           </blockquote>
+          <footer className="flex items-center gap-4">
+            <Image
+              src="/images/nigerianMother.webp"
+              alt="Portriat of Mrs. Adewale"
+              width={80}
+              height={80}
+              className="rounded-full object-cover"
+            />
+            <div>
+              <cite className="not-italic font-bold text-[#061426]">
+                - Mrs. Adewale
+              </cite>
+              <p className="text-sm text-gray-600 font-bold">Parent</p>
+            </div>
+          </footer>
         </article>
       </div>
     </section>
