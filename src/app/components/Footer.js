@@ -31,7 +31,7 @@ function Footer() {
               aria-label="Footer Social Links"
             >
               <li>
-                <Link href="" className="text-white flex items-center">
+                <Link href="/" className="text-white flex items-center">
                   Home
                 </Link>
               </li>
@@ -62,7 +62,7 @@ function Footer() {
             </ul>
             <ul className="flex flex-col gap-4">
               <li>
-                <Link href="" className="text-white flex items-center">
+                <Link href="fixtures" className="text-white flex items-center">
                   Fixtures
                 </Link>
               </li>

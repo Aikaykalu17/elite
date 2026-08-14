@@ -15,10 +15,13 @@ import {
 import Image from "next/image";
 
 function page() {
+  const month = new Date().toLocaleDateString("en-US", { month: "long" });
+  const year = new Date().getFullYear();
+
   return (
     <section className="w-full mt-24">
       <div className="flex flex-col gap-4">
-        <div className="bg-[#061426]  h-40 flex flex-col items-center justify-center gap-4  py-4">
+        <div className="bg-[#061426]  h-40 flex flex-col items-center justify-center gap-4 py-4">
           <h1 className="text-white text-2xl font-bold">
             PROGRAMS AND TRAINING
           </h1>
@@ -113,7 +116,7 @@ function page() {
                     src="/images/outdoorFootball.webp"
                     alt="Elite FC Outdoor Field"
                     height={200}
-                    width={150}
+                    width={100}
                     className="object-cover rounded-lg"
                   />
                   <div className="flex flex-col gap-2">
@@ -127,9 +130,15 @@ function page() {
                         8:00 AM
                       </time>
                     </p>
-                    <address className="text-[#0D2038] text-xs">
-                      Legacy Pitch, Abuja, Nigeria
-                    </address>
+                    <p className="text-xs">
+                      <strong>Date:</strong>{" "}
+                      <time datetime="2026-08-30">
+                        Saturday, 30th {month}, {year}
+                      </time>
+                    </p>
+                    <p className="text-xs">
+                      <strong>Venue:</strong> Legacy Pitch, Abuja
+                    </p>
                     <p className="text-xs">
                       <strong className="text-xs">What to bring:</strong> Boots,
                       Shin guards, Water, Towel
