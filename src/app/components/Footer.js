@@ -47,7 +47,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="text-white flex items-center">
+                <Link href="/programs" className="text-white flex items-center">
                   Programs
                 </Link>
               </li>

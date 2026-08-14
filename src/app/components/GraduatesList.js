@@ -96,6 +96,30 @@ function GraduatesList() {
             </div>
           ))}
         </div>
+        <div>
+          <div
+            className="h-125 relative overflow-hidden  bg-center bg-no-repeat bg-cover px-4 pt-16 flex flex-col gap-4 rounded"
+            style={{ backgroundImage: "url('/images/ebuka.webp')" }}
+          >
+            <div className="absolute inset-0 bg-linear-to-t from-slate-900/10 via-slate-900/40 to-slate-900/20" />
+            <h2 className="text-[#F5B800] font-bold text-xl z-50">
+              SUCCESS STORY
+            </h2>
+            <div className="z-50">
+              <p className="text-white font-bold text-xl">
+                OKORONKWO CHUKWUEBUKA
+              </p>
+              <p className="text-[#F5B800] font-bold text-xl">
+                From Elite to Europe
+              </p>
+            </div>
+            <p className="text-sm font-bold z-50 text-white">
+              Joined Elite at the age of 17. His hardwork and dedication earned
+              him a move to FC Van in Armenia and later to FC Rashvan in
+              Tajikistan.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

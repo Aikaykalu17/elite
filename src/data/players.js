@@ -73,12 +73,14 @@ export const players = [
   },
   {
     id: 9,
-    name: "Wilson Obasi",
-    category: "In Academy",
-    image: "/images/wilsonObasi.webp",
+    name: "Okoronkwo Chukwuebuka",
+    category: "Currently Pro",
+    image: "/images/tested.webp",
     description:
-      "Wilson Obasi, an Elite FC All Stars Academy graduate, is currently on trials with Sporting Lisbon Academy in Portugal.",
+      "Okoronkwo Chukwuebuka, a professional footballer, currently plays for Fc Rashvan in Tajikistan.",
+    league: "Ligai Olii Tojikiston",
   },
+
   {
     id: 10,
     name: "David Finidi",
@@ -90,13 +92,13 @@ export const players = [
   },
   {
     id: 11,
-    name: "Okoronkwo Chukwuebuka",
-    category: "Currently Pro",
-    image: "/images/tested.webp",
+    name: "Wilson Obasi",
+    category: "In Academy",
+    image: "/images/wilsonObasi.webp",
     description:
-      "Okoronkwo Chukwuebuka, a professional footballer, currently plays for Fulham in England.",
-    league: "English Premier League",
+      "Wilson Obasi, an Elite FC All Stars Academy graduate, is currently on trials with Sporting Lisbon Academy in Portugal.",
   },
+
   {
     id: 12,
     name: "Afolabi Jeremiah",
