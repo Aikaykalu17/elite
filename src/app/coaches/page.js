@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function page() {
   return (
-    <section className="w-full mt-24">
+    <section className="w-full mt-20">
       <div className="bg-[#061426] h-40 flex flex-col items-center justify-center gap-4 py-4">
         <h1 className="text-white text-2xl font-bold">OUR COACHES</h1>
         <p className="text-white font-semibold text-center">
@@ -88,9 +88,7 @@ function page() {
                 />
                 <div className="flex flex-col gap-4">
                   <div>
-                    <h3 className="text-[#061426] font-bold">
-                      Ndubuaku Casper
-                    </h3>
+                    <h3 className="text-[#061426] font-bold">Jubril Sanusi</h3>
                   </div>
 
                   <div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d2038;
+  --background: #061426;
   --foreground: #171717;
 }
 
@@ -107,4 +107,18 @@ body {
 
 .logo.active {
   display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
 }

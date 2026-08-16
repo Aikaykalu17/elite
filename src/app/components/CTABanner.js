@@ -5,11 +5,11 @@ function CTABanner() {
         <h1 className="text-[#F5B800] text-2xl">
           READY TO START <br /> YOUR JOURNEY?
         </h1>
-        <p className="text-white text-center">
+        <p className="text-white text-center text-xs">
           Join Elite Stars Football Club All Stars today <br /> and take the
           first step towards your <br /> dream.
         </p>
-        <button className="bg-[#F5B800] text-black font-semibold h-14 w-40 rounded-md">
+        <button className="bg-[#F5B800] text-black font-semibold h-10 w-28 text-xs rounded-md">
           ENROL NOW
         </button>
       </div>

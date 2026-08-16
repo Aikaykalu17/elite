@@ -14,7 +14,7 @@ import {
 function Footer() {
   return (
     <footer className="w-full bg-[#061426] py-8 flex flex-col gap-6">
-      <div className="flex flex-row gap-4 w-[90%] mx-auto">
+      <div className="grid grid-cols-2 gap-4 w-[90%] mx-auto">
         <div>
           <Image
             src="/eliteBgTrns.webp"
@@ -24,37 +24,46 @@ function Footer() {
           />
         </div>
         <nav aria-label="Social Links" className="flex flex-col gap-4">
-          <h2 className="text-white">QUICK LINKS</h2>
-          <div className="flex flex-row gap-6">
+          <h2 className="text-white text-sm ">QUICK LINKS</h2>
+          <div className="flex flex-row gap-6 ">
             <ul
               className="flex flex-col gap-4"
               aria-label="Footer Social Links"
             >
               <li>
-                <Link href="/" className="text-white flex items-center">
+                <Link href="/" className="text-white flex items-center text-xs">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link href="/about-us" className="text-white flex items-center">
+                <Link
+                  href="/about-us"
+                  className="text-white flex items-center text-xs"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/coaches" className="text-white flex items-center">
+                <Link
+                  href="/coaches"
+                  className="text-white flex items-center text-xs"
+                >
                   Coaches
                 </Link>
               </li>
               <li>
-                <Link href="/programs" className="text-white flex items-center">
+                <Link
+                  href="/programs"
+                  className="text-white flex items-center text-xs"
+                >
                   Programs
                 </Link>
               </li>
               <li>
                 <Link
                   href="/graduates"
-                  className="text-white flex items-center"
+                  className="text-white flex items-center text-xs"
                 >
                   Graduates
                 </Link>
@@ -62,17 +71,23 @@ function Footer() {
             </ul>
             <ul className="flex flex-col gap-4">
               <li>
-                <Link href="fixtures" className="text-white flex items-center">
+                <Link
+                  href="fixtures"
+                  className="text-white flex items-center text-xs"
+                >
                   Fixtures
                 </Link>
               </li>
               <li>
-                <Link href="" className="text-white flex items-center">
+                <Link
+                  href="/gallery"
+                  className="text-white flex items-center text-xs"
+                >
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="" className="text-white flex items-center">
+                <Link href="" className="text-white flex items-center text-xs">
                   Contact
                 </Link>
               </li>
@@ -81,25 +96,25 @@ function Footer() {
         </nav>
       </div>
 
-      <div className="flex flex-col justify-center w-[90%] mx-auto gap-6">
+      <div className="flex flex-col justify-center text-xs w-[90%] mx-auto gap-6">
         <div className="flex flex-col gap-6 w-full">
           <h3 className="text-white">CONTACT US</h3>
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-6 items-center text-xs">
             <FaPhoneAlt color="#F5B800" title="Phone call icon" />
             <a href="tel:+2348101375140" className="text-white">
               +234 810 137 5140
             </a>
           </div>
-          <div className="flex gap-6 items-center">
-            <FaEnvelope color="#F5B800" size={30} title="Email Icon" />
+          <div className="flex gap-6 items-center text-xs">
+            <FaEnvelope color="#F5B800" size={20} title="Email Icon" />
             <a href="mailto:ikegod4luv@gmail.com" className="text-white">
               info@elitefc.com
             </a>
           </div>
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-6 items-center text-xs">
             <FaMapMarkerAlt
               color="#F5B800"
-              size={30}
+              size={20}
               title="Location pointer icon"
             />
             <address className=" text-white">
@@ -115,28 +130,28 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF size={40} color="#1877F2" title="Facebook Icon" />
+              <FaFacebookF size={20} color="#1877F2" title="Facebook Icon" />
             </a>
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram size={40} title="Instagram Icon" color="#E4405F" />
+              <FaInstagram size={20} title="Instagram Icon" color="#E4405F" />
             </a>
             <a
               href="https://www.youtube.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaYoutube size={40} color="#FF0000" title="YouTube icon" />
+              <FaYoutube size={20} color="#FF0000" title="YouTube icon" />
             </a>
             <a
               href="https://www.youtube.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp size={40} color="#25D366" title="WhatsApp icon" />
+              <FaWhatsapp size={20} color="#25D366" title="WhatsApp icon" />
             </a>
           </nav>
         </div>

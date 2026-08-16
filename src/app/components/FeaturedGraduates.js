@@ -24,6 +24,7 @@ function FeaturedGraduates() {
               src="/images/blackHeadshot.webp"
               width={100}
               height={50}
+              style={{ width: "auto", height: "auto" }}
               alt="Headshot of a Nigerian footballer wearing a footbball kit, captured with a confident, focused expression."
               className="object-cover"
             />
@@ -40,6 +41,7 @@ function FeaturedGraduates() {
               src="/images/secondHeadshot.webp"
               width={100}
               height={50}
+              style={{ width: "auto", height: "auto" }}
               alt="Headshot of a Nigerian footballer smiling confidently in a blue-and-yellow kit."
               className="object-cover"
             />
@@ -56,6 +58,7 @@ function FeaturedGraduates() {
               src="/images/thirdHeadshot.webp"
               width={100}
               height={50}
+              style={{ width: "auto", height: "auto" }}
               alt="Headshot of a teenage Nigerian footballer wearing a blue-and-yellow kit with a serious expression."
               className="object-cover rounded-2xl"
             />
@@ -75,6 +78,7 @@ function FeaturedGraduates() {
               src="/images/fourthHeadshot.webp"
               width={100}
               height={50}
+              style={{ width: "auto", height: "auto" }}
               alt="Headshot of a teenage Nigerian footballer shouting in celebration."
               className="object-cover rounded-2xl"
             />

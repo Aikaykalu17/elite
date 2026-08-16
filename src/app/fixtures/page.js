@@ -9,7 +9,7 @@ import TableList from "../components/TableList";
 function page() {
   const year = new Date().getFullYear();
   return (
-    <section className="w-full mt-24">
+    <section className="w-full mt-20">
       <div className="flex flex-col ">
         <div className="bg-[#061426] h-20 flex flex-col items-center justify-center gap-4 py-4">
           <h1 className="text-white text-2xl font-bold">FIXTURES & RESULTS</h1>

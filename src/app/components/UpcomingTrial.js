@@ -20,7 +20,7 @@ function UpcomingTrial() {
             />
           </div>
 
-          <article className="flex flex-col gap-4">
+          <article className="flex flex-col gap-4 text-xs">
             <p className="text-gray-700">
               <time dateTime="2026-12-24T09:00">
                 Saturday, 24th October {year}, <br /> 9:00 AM
@@ -45,24 +45,25 @@ function UpcomingTrial() {
           PARENT TESTIMONIAL
         </h2>
         <article className="flex flex-col gap-6">
-          <blockquote className="text-gray-600 flex gap-4">
+          <blockquote className="text-gray-600 flex gap-4 text-xs">
             <FaQuoteLeft size={50} color="#F5B800" />
             Elite Football Club All Stars didn&apos;t just improve my son&apos;s
             game; it shaped his character and discipline.
           </blockquote>
-          <footer className="flex items-center gap-4">
+          <footer className="flex  items-center gap-4">
             <Image
               src="/images/nigerianMother.webp"
               alt="Portriat of Mrs. Adewale"
-              width={80}
-              height={80}
+              width={50}
+              height={50}
               className="rounded-full object-cover"
+              style={{ width: "auto", height: "auto" }}
             />
-            <div>
-              <cite className="not-italic font-bold text-[#061426]">
+            <div className="flex flex-col items-center">
+              <cite className="text-sm font-bold text-[#061426]">
                 - Mrs. Adewale
               </cite>
-              <p className="text-sm text-gray-600 font-bold">Parent</p>
+              <p className="text-xs text-gray-600 font-bold">Parent</p>
             </div>
           </footer>
         </article>
