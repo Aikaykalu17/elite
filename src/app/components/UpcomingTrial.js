@@ -1,5 +1,6 @@
 import { FaRegCalendarAlt, FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 function UpcomingTrial() {
   const year = new Date().getFullYear();
@@ -30,10 +31,12 @@ function UpcomingTrial() {
             <address className="not-italic text-gray-600">
               Legacy Pitch, Abuja
             </address>
-            <button className="bg-[#F5B800] text-xs text-black font-semibold h-10 w-36 rounded-md">
-              {" "}
-              REGISTER
-            </button>
+            <Link href="/form">
+              <button className="bg-[#F5B800] text-xs text-black font-semibold h-10 w-36 rounded-md">
+                {" "}
+                REGISTER
+              </button>
+            </Link>
           </article>
         </div>
       </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 function Hero() {
   return (
     <section
@@ -21,12 +23,16 @@ function Hero() {
         <p className="text-white text-xs font-semibold">Raising Champions.</p>
       </div>
       <div className="flex gap-4">
-        <button className="bg-[#F5B800] text-black text-xs font-semibold h-12 w-40 rounded-md">
-          JOIN US NOW
-        </button>
-        <button className="border border-[#F5B800] text-xs text-white font-semibold h-12 w-40 rounded-md">
-          LEARN MORE
-        </button>
+        <Link href="/form">
+          <button className="bg-[#F5B800] text-black text-xs font-semibold h-12 w-40 rounded-md">
+            JOIN US NOW
+          </button>
+        </Link>
+        <Link href="/about-us">
+          <button className="border border-[#F5B800] text-xs text-white font-semibold h-12 w-40 rounded-md">
+            LEARN MORE
+          </button>
+        </Link>
       </div>
     </section>
   );

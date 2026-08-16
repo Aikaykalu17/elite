@@ -184,6 +184,13 @@ const media = [
     alt: "Elite FC Training Session Highlights",
     thumbnail: "https://img.youtube.com/vi/GBcbEIrOBF8/hqdefault.jpg",
   },
+  {
+    id: 31,
+    mediaType: "video",
+    videoId: "7Smy1wRjsN4",
+    alt: "Elite FC Training Session Highlights",
+    thumbnail: "https://img.youtube.com/vi/7Smy1wRjsN4/hqdefault.jpg",
+  },
 ];
 
 export default media;

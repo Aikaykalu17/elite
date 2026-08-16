@@ -18,6 +18,7 @@ export default function HeaderWrapper() {
     "/gallery",
     "/graduates",
     "/programs",
+    "/form",
   ].includes(location);
 
   return (

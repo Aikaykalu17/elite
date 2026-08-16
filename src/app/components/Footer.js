@@ -87,6 +87,14 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/form"
+                  className="text-white flex items-center text-xs"
+                >
+                  Enroll Now
+                </Link>
+              </li>
+              <li>
                 <Link href="" className="text-white flex items-center text-xs">
                   Contact
                 </Link>
