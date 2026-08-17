@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${manrope.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col w-full items-center">
         <HeaderWrapper />
+
         {children}
         <Footer />
       </body>

@@ -3,8 +3,25 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+import Hamburger from "./Hamburger";
+import navItems from "@/data/navItems";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/", label: "HOME" },
+    { href: "/about-us", label: "ABOUT" },
+    { href: "/coaches", label: "COACHES" },
+    { href: "/programs", label: "PROGRAMS" },
+    { href: "/graduates", label: "GRADUATES" },
+    { href: "/fixtures", label: "FIXTURES" },
+    { href: "/contact", label: "CONTACT" },
+    { href: "/gallery", label: "GALLERY" },
+  ];
 
   // Disables homepage scrolling whenever open is true.
   useEffect(() => {
@@ -24,7 +41,7 @@ function Navbar() {
   const mobileMenuId = "mobile-navigation";
 
   return (
-    <nav className="bg-[#061426] shadow-2xs  flex justify-between items-center h-20 w-full  fixed left-0 top-0 z-50">
+    <nav className="bg-[#061426] flex justify-between items-center h-20 w-full  fixed left-0 top-0 z-50">
       <div className="w-[90%] mx-auto flex justify-between items-center">
         <div>
           <Image
@@ -36,7 +53,38 @@ function Navbar() {
             style={{ width: "auto", height: "auto" }}
           />
         </div>
+        {/* Nav links for desktop view */}
+        <nav className="hidden md:flex gap-2">
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href;
 
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-current={isActive ? "page" : undefined} // screen reader support
+                className={`
+              px-4 py-3  text-xs font-bold 
+              ${
+                isActive
+                  ? " text-[#F5B800] border-b-2 border-b-[#F5B800] pb-px"
+                  : "text-white hover:border-b-2 hover:border-b-[#F5B800] hover:pb-px"
+              }
+            `}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
+        <Link href="/form" className="hidden md:block">
+          <button
+            className="py-4 px-8 rounded-lg bg-[#F5B800] text-xs text-[#061426] font-bold cursor-pointer border md:hover:bg-transparent md:hover:text-white transition-all duration-300 ease-out
+    hover:translate-y-1 hover:shadow-[0_8px_20px_rgba(255,255,255,0.15)]"
+          >
+            JOIN NOW
+          </button>
+        </Link>
         {/* Hamburger biutton */}
         <div className="md:hidden">
           <button
@@ -51,6 +99,17 @@ function Navbar() {
             <span></span>
             <span></span>
           </button>
+        </div>
+
+        <div
+          id={mobileMenuId}
+          className={open ? "overlay" : "overlay active"}
+          onClick={(e) => e.stopPropagation()}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation menu"
+        >
+          <Hamburger navItems={navItems} onClose={handleClick} isOpen={open} />
         </div>
       </div>
     </nav>

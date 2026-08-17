@@ -1,6 +1,6 @@
 import RegistrationForm from "../components/RegistrationForm";
 
-function page() {
+function Page() {
   return (
     <section className="mt-20 w-full">
       <div className=" flex flex-col items-center gap-2 py-4">
@@ -16,4 +16,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

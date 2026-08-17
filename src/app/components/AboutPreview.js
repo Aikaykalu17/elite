@@ -4,8 +4,8 @@ import Link from "next/link";
 function AboutPreview() {
   return (
     <section className="bg-white  w-full py-4">
-      <div className="w-[90%] mx-auto flex flex-col gap-4">
-        <div className="w-full flex flex-col gap-4">
+      <div className="w-[90%] mx-auto flex flex-col gap-4 md:flex md:flex-row md:justify-between">
+        <div className="w-full flex flex-col gap-4 md:flex md:flex-col md:justify-center">
           <p className="text-[#061426] font-bold">ABOUT ELITE</p>
           <h1 className="text-[#061426] font-bold">
             FOOTBALL CLUB <br /> ALL STARS
@@ -25,14 +25,14 @@ function AboutPreview() {
             </button>
           </Link>
         </div>
-        <div className="w-full">
+        <div className="w-full md:flex md:justify-end">
           <Image
             src="/images/playersBackingCameraNaija.webp"
-            width={1536}
+            width={1036}
             height={1024}
             alt="Six Nigerian footballers proudly standing with their backs to the camera, wearing the same blue-and-yellow “ELITE FC” kit."
-            className="rounded-[10px] object-cover"
-            style={{ width: "auto", height: "auto" }}
+            className="rounded-[10px] object-cover md:h-80 md:w-auto"
+            // style={{ width: "auto", height: "auto" }}
           />
         </div>
       </div>

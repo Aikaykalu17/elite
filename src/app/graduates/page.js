@@ -1,6 +1,6 @@
 import GraduatesList from "../components/GraduatesList";
 
-function page() {
+function Page() {
   return (
     <section className="w-full mt-20">
       <div className="bg-[#061426] flex flex-col items-center justify-center gap-4 py-4">
@@ -16,4 +16,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

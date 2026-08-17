@@ -1,7 +1,7 @@
 import media from "@/data/media";
 import MediaList from "../components/MediaList";
 
-function page() {
+function Page() {
   return (
     <section className="w-full mt-20 bg-[#061426]">
       <div className="flex flex-col gap-4 items-center w-[95%] mx-auto py-4">
@@ -13,4 +13,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

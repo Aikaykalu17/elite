@@ -6,7 +6,7 @@ import FixturesList from "../components/FixturesList";
 import ResultsList from "../components/ResultsList";
 import TableList from "../components/TableList";
 
-function page() {
+function Page() {
   const year = new Date().getFullYear();
   return (
     <section className="w-full mt-20">
@@ -37,4 +37,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

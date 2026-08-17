@@ -49,17 +49,21 @@ body {
 
 .hamburger span:nth-child(1) {
   top: 0;
-  width: 100%;
+  left: auto;
+  right: 0;
+  width: 40%;
 }
 .hamburger span:nth-child(2) {
   top: 9px;
+  left: auto;
+  right: 0;
   width: 70%;
 }
 .hamburger span:nth-child(3) {
   top: 18px;
-  width: 40%;
+  left: 0;
+  width: 100%;
 }
-
 /* Open state */
 
 .hamburger.open span:nth-child(1) {
@@ -86,13 +90,13 @@ body {
 .overlay {
   height: 100dvh;
   width: 100%;
-  background-color: #000;
+  background-color: #061426;
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
-  /* overflow: hidden; */
-  overflow-y: auto;
+  overflow: hidden;
+  /* overflow-y: auto; */
   padding-top: 3rem;
 }
 
@@ -123,3 +127,17 @@ body {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
 }
+
+/* Hamburger facing right */
+/* .hamburger span:nth-child(1) {
+  top: 0;
+  width: 100%;
+}
+.hamburger span:nth-child(2) {
+  top: 9px;
+  width: 70%;
+}
+.hamburger span:nth-child(3) {
+  top: 18px;
+  width: 40%;
+} */

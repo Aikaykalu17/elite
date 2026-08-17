@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 
-function page() {
+function Page() {
   return (
     <section className="mt-20 w-full">
       <div className=" flex flex-col items-center gap-2 py-4">
@@ -119,4 +119,4 @@ function page() {
     </section>
   );
 }
-export default page;
+export default Page;

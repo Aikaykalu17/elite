@@ -7,15 +7,22 @@ import { HiOutlineAcademicCap } from "react-icons/hi2";
 function Stats() {
   return (
     <section className="w-full flex justify-center items-center h-full">
-      <div className="grid grid-cols-2 gap-6  w-[90%] py-8">
+      <div className="grid grid-cols-2 gap-6  w-[90%] py-8 md:flex md:justify-between">
         <div className="flex items-center gap-2">
-          <FaMedal size={30} color="#F5B800" title="Medal icon" />
+          <FaMedal
+            size={30}
+            color="#F5B800"
+            title="Medal icon"
+            aria-hidden="true"
+          />
 
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white">
+            <span className="text-sm font-bold text-white md:text-base">
               <CountUp end={8} />
             </span>
-            <span className="text-[0.71875rem] text-white">TEAM RANKINGS</span>
+            <span className="text-[0.71875rem] text-white md:text-base">
+              TEAM RANKINGS
+            </span>
           </div>
         </div>
 
@@ -25,32 +32,49 @@ function Stats() {
             size={30}
             color="#F5B800"
             title="Graduates Icon"
+            aria-hidden="true"
           />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white">
+            <span className="text-sm font-bold text-white md:text-base">
               <CountUp end={120} />
             </span>
-            <span className="text-[0.71875rem] text-white">GRADUATES</span>
+            <span className="text-[0.71875rem] text-white md:text-base">
+              GRADUATES
+            </span>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <FaTrophy size={30} color="#F5B800" title="Trophy Icon" />
+          <FaTrophy
+            size={30}
+            color="#F5B800"
+            title="Trophy Icon"
+            aria-hidden="true"
+          />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white">
+            <span className="text-sm font-bold text-white md:text-base">
               <CountUp end={25} />
             </span>
-            <span className="text-[0.71875rem] text-white">TROPHIES WON</span>
+            <span className="text-[0.71875rem] text-white md:text-base">
+              TROPHIES WON
+            </span>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <FaUsers size={30} color="#F5B800" title="User Icon" />
+          <FaUsers
+            size={30}
+            color="#F5B800"
+            title="User Icon"
+            aria-hidden="true"
+          />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white">
+            <span className="text-sm font-bold text-white md:text-base">
               <CountUp end={100} />
             </span>
-            <span className="text-[0.71875rem] text-white">ACTIVE PLAYERS</span>
+            <span className="text-[0.71875rem] text-white md:text-base">
+              ACTIVE PLAYERS
+            </span>
           </div>
         </div>
       </div>
