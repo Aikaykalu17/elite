@@ -7,7 +7,7 @@ function UpcomingTrial() {
 
   return (
     <section className="bg-white w-full h-full">
-      <div className="bg-slate-200 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl">
+      <div className="bg-slate-100 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl">
         <div>
           <h1 className="font-bold">UPCOMING TRIAL</h1>
         </div>
@@ -45,7 +45,7 @@ function UpcomingTrial() {
         </div>
       </div>
       <div
-        className="bg-slate-200 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl"
+        className="bg-slate-100 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl"
         aria-labelledby="testimonials"
       >
         <h2 id="testimonials" className="font-bold">

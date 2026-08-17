@@ -49,33 +49,34 @@ body {
 
 .hamburger span:nth-child(1) {
   top: 0;
+  width: 100%;
 }
 .hamburger span:nth-child(2) {
   top: 9px;
+  width: 70%;
 }
 .hamburger span:nth-child(3) {
   top: 18px;
+  width: 40%;
 }
 
 /* Open state */
 
 .hamburger.open span:nth-child(1) {
-  opacity: 0;
-  transform: translateX(-20px);
+  top: 4px;
+  width: 100%;
+  transform: rotate(45deg);
+  opacity: 1;
 }
 
 .hamburger.open span:nth-child(2) {
-  top: 9px;
-  transform: rotate(45deg);
-  background-color: #fff;
-  z-index: 1000;
+  opacity: 0;
 }
 
 .hamburger.open span:nth-child(3) {
-  top: 9px;
+  top: 4px;
+  width: 100%;
   transform: rotate(-45deg);
-  background-color: #fff;
-  z-index: 1000;
 }
 
 .hamburger.open span {

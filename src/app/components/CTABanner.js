@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function CTABanner() {
   return (
     <section className="h-full w-full flex justify-center bg-[#0D2038]">
@@ -9,12 +11,14 @@ function CTABanner() {
           Join Elite Stars Football Club All Stars today <br /> and take the
           first step towards your <br /> dream.
         </p>
-        <button
-          className="bg-[#F5B800] text-black font-semibold px-8 py-3  text-xs rounded-md"
-          aria-label="Enrol Now"
-        >
-          ENROL NOW
-        </button>
+        <Link href="/form">
+          <button
+            className="bg-[#F5B800] text-black font-semibold px-8 py-3  text-xs rounded-md"
+            aria-label="Enroll Now"
+          >
+            ENROLL NOW
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -25,7 +25,7 @@ function Footer() {
         </div>
         <nav aria-label="Social Links" className="flex flex-col gap-4">
           <h2 className="text-white text-sm ">QUICK LINKS</h2>
-          <div className="flex flex-row gap-6 ">
+          <div className="flex flex-row gap-6 justify-between">
             <ul
               className="flex flex-col gap-4"
               aria-label="Footer Social Links"

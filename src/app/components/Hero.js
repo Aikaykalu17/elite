@@ -29,7 +29,7 @@ function Hero() {
       <div className="flex gap-4">
         <Link href="/form">
           <button
-            className="bg-[#F5B800] text-black text-xs font-semibold py-4 px-8  rounded-md"
+            className="bg-[#F5B800] text-black text-xs font-semibold py-3 px-8  rounded-md"
             type="button"
             aria-label="Join us now"
           >
@@ -38,7 +38,7 @@ function Hero() {
         </Link>
         <Link href="/about-us">
           <button
-            className="border border-[#F5B800] text-xs text-white font-semibold py-4 px-8 rounded-md"
+            className="border border-[#F5B800] text-xs text-white font-semibold py-3 px-8 rounded-md"
             type="button"
             aria-label="Learn more"
           >
