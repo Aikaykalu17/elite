@@ -16,10 +16,11 @@ function ResultsList({ results }) {
     <>
       <div className="flex flex-col items-center gap-2 border border-slate-300 rounded-sm pb-2">
         <ul className="list-none flex flex-col gap-1 w-full">
-          {visibleResults.map((result) => (
+          {visibleResults.map((result, i) => (
             <li
               key={result.id}
-              className="grid grid-cols-[3rem_1fr_2rem] items-center gap-2 p-2 border border-slate-300 rounded"
+              className="grid grid-cols-[3rem_1fr_2rem] items-center gap-2 p-2 border border-slate-300 rounded fade-in"
+              style={{ animationDelay: `${Math.min(i * 100, 800)}ms` }}
             >
               <p className="text-xs">
                 <time dateTime={result.date}>{result.displayDate}</time>
@@ -37,7 +38,9 @@ function ResultsList({ results }) {
         {results.length > 3 && (
           <button
             onClick={() => setShowAll((prev) => !prev)}
-            className="h-8 bg-[#061426] text-[#F5B800] w-48 text-xs rounded-sm self-center"
+            type="button"
+            aria-label="Show Table"
+            className="bg-[#061426] text-[#F5B800] text-xs rounded-sm self-center px-6 py-2"
           >
             {showAll ? "Show less results" : "View more results"}
           </button>

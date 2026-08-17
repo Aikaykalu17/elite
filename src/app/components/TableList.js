@@ -49,7 +49,7 @@ function FixturesList({ table }) {
         {table.length > 3 && (
           <button
             onClick={() => setShowAll((prev) => !prev)}
-            className="h-8 bg-[#061426] text-[#F5B800] w-48 text-xs rounded-sm self-center"
+            className="bg-[#061426] text-[#F5B800] text-xs rounded-sm self-center px-6 py-2"
           >
             {showAll ? "Show less table" : "View full table"}
           </button>

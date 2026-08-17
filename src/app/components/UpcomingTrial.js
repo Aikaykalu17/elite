@@ -29,10 +29,14 @@ function UpcomingTrial() {
             </p>
 
             <address className="not-italic text-gray-600">
-              Legacy Pitch, Abuja
+              Turf Arena, Wuse, Abuja
             </address>
             <Link href="/form">
-              <button className="bg-[#F5B800] text-xs text-black font-semibold h-10 w-36 rounded-md">
+              <button
+                className="bg-[#F5B800] text-xs text-black font-semibold px-8 py-3 rounded-md"
+                type="button"
+                aria-label="Register"
+              >
                 {" "}
                 REGISTER
               </button>
@@ -56,11 +60,10 @@ function UpcomingTrial() {
           <footer className="flex  items-center gap-4">
             <Image
               src="/images/nigerianMother.webp"
-              alt="Portriat of Mrs. Adewale"
+              alt="Mrs. Adewale"
               width={50}
               height={50}
-              className="rounded-full object-cover"
-              style={{ width: "auto", height: "auto" }}
+              className="rounded-full object-cover w-20 h-20"
             />
             <div className="flex flex-col items-center">
               <cite className="text-sm font-bold text-[#061426]">

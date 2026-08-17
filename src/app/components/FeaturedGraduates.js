@@ -11,7 +11,7 @@ function FeaturedGraduates() {
         <div className="flex flex-row justify-between items-center">
           <h1 className="font-bold">OUR GRADUATES</h1>
           <Link
-            href=""
+            href="/graduates"
             className="text-xs font-bold flex flex-row justify-between items-center"
           >
             VIEW ALL <HiArrowRight />
@@ -55,42 +55,40 @@ function FeaturedGraduates() {
           </article>
           <article className="border border-slate-400 w-max p-4 rounded-2xl flex flex-col gap-1">
             <Image
-              src="/images/thirdHeadshot.webp"
+              src="/images/alukwu.webp"
               width={100}
               height={50}
-              style={{ width: "auto", height: "auto" }}
-              alt="Headshot of a teenage Nigerian footballer wearing a blue-and-yellow kit with a serious expression."
-              className="object-cover rounded-2xl"
+              alt="Alukwu Jonathan"
+              className="object-cover rounded-2xl w-40 h-32"
             />
             <h2 className="text-xs">
               {" "}
-              <strong>Name:</strong> Ifeanyi Umeh
+              <strong>Name:</strong>Alukwu Jonathan
             </h2>
             <p className="text-xs">
-              <strong>Club:</strong> Club Brugge (Belgium)
+              <strong>Club:</strong> Asko Oedt (Austria)
             </p>
             <p className="text-xs">
-              <strong>League:</strong> Jupiler <br /> Pro League
+              <strong>League:</strong> Regionalliga Mitte
             </p>
           </article>
           <article className="border border-slate-400 w-max p-4 rounded-2xl flex flex-col gap-1">
             <Image
-              src="/images/fourthHeadshot.webp"
+              src="/images/tested.webp"
               width={100}
-              height={50}
-              style={{ width: "auto", height: "auto" }}
-              alt="Headshot of a teenage Nigerian footballer shouting in celebration."
-              className="object-cover rounded-2xl"
+              height={100}
+              alt="Okoronkwo Chukwuebuka"
+              className="object-cover rounded-2xl w-40 h-32"
             />
             <h2 className="text-xs">
               {" "}
-              <strong>Name:</strong> Temitope Adeyemi
+              <strong>Name:</strong> Okoronkwo Chukwuebuka
             </h2>
             <p className="text-xs">
-              <strong>Club:</strong> Galatasaray (Turkey)
+              <strong>Club:</strong> FC Rashvan (Tajikistan)
             </p>
             <p className="text-xs">
-              <strong>League:</strong> Turkish Süper Lig
+              <strong>League:</strong> Ligai Olii Tojikiston
             </p>
           </article>
         </div>

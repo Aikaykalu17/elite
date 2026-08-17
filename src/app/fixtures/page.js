@@ -12,7 +12,7 @@ function page() {
     <section className="w-full mt-20">
       <div className="flex flex-col ">
         <div className="bg-[#061426] h-20 flex flex-col items-center justify-center gap-4 py-4">
-          <h1 className="text-white text-2xl font-bold">FIXTURES & RESULTS</h1>
+          <h1 className="text-white font-bold">FIXTURES & RESULTS</h1>
         </div>
         <div className="bg-white w-full rounded-lg py-4">
           <div className="w-[90%] mx-auto">

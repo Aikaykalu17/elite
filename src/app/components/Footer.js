@@ -95,7 +95,10 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="text-white flex items-center text-xs">
+                <Link
+                  href="/contact"
+                  className="text-white flex items-center text-xs"
+                >
                   Contact
                 </Link>
               </li>
@@ -126,7 +129,7 @@ function Footer() {
               title="Location pointer icon"
             />
             <address className=" text-white">
-              Legacy Pitch, Abuja, Nigeria
+              Turf Arena, Abuja, Nigeria
             </address>
           </div>
         </div>
@@ -137,6 +140,7 @@ function Footer() {
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Elite FC on Facebook"
             >
               <FaFacebookF size={20} color="#1877F2" title="Facebook Icon" />
             </a>
@@ -144,6 +148,7 @@ function Footer() {
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Elite FC on Instagram"
             >
               <FaInstagram size={20} title="Instagram Icon" color="#E4405F" />
             </a>
@@ -151,15 +156,22 @@ function Footer() {
               href="https://www.youtube.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Elite FC on YouTube"
             >
               <FaYoutube size={20} color="#FF0000" title="YouTube icon" />
             </a>
             <a
-              href="https://www.youtube.com"
+              href="https://wa.me/2348012345678"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Chat with us on WhatsApp"
             >
-              <FaWhatsapp size={20} color="#25D366" title="WhatsApp icon" />
+              <FaWhatsapp
+                size={20}
+                color="#25D366"
+                title="WhatsApp icon"
+                aria-hidden="true"
+              />
             </a>
           </nav>
         </div>

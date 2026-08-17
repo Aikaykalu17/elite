@@ -5,8 +5,12 @@ import Link from "next/link";
 function Hero() {
   return (
     <section
-      className="relative w-full h-100 bg-cover bg-center flex flex-col justify-end gap-4 px-4 mt-4"
-      style={{ backgroundImage: "url('/images/EliteFootballer.webp')" }}
+      className="relative w-full aspect-4/5 bg-cover bg-center flex flex-col justify-end gap-4 py-4 px-4 mt-4"
+      style={{
+        backgroundImage: "url('/images/EliteFootballer.webp')",
+        backgroundPosition: "center top",
+        backgroundSize: "cover",
+      }}
     >
       <div className="w-full">
         <h1 className="text-2xl font-bold text-white leading-14">
@@ -24,12 +28,20 @@ function Hero() {
       </div>
       <div className="flex gap-4">
         <Link href="/form">
-          <button className="bg-[#F5B800] text-black text-xs font-semibold h-12 w-40 rounded-md">
+          <button
+            className="bg-[#F5B800] text-black text-xs font-semibold py-4 px-8  rounded-md"
+            type="button"
+            aria-label="Join us now"
+          >
             JOIN US NOW
           </button>
         </Link>
         <Link href="/about-us">
-          <button className="border border-[#F5B800] text-xs text-white font-semibold h-12 w-40 rounded-md">
+          <button
+            className="border border-[#F5B800] text-xs text-white font-semibold py-4 px-8 rounded-md"
+            type="button"
+            aria-label="Learn more"
+          >
             LEARN MORE
           </button>
         </Link>

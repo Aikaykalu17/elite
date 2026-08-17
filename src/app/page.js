@@ -7,8 +7,6 @@ import FeaturedGraduates from "./components/FeaturedGraduates";
 import UpcomingTrial from "./components/UpcomingTrial";
 import CTABanner from "./components/CTABanner";
 
-import Footer from "@/app/components/Footer";
-
 import HeaderWrapper from "./components/HeadWrapper";
 
 export default function Home() {
@@ -21,7 +19,6 @@ export default function Home() {
       <FeaturedGraduates />
       <UpcomingTrial />
       <CTABanner />
-      <Footer />
     </>
   );
 }

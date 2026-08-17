@@ -18,8 +18,8 @@ function GraduatesList() {
 
   function getButtonStyle(category) {
     return activeFilter === category
-      ? "h-8 w-32 font-semibold text-black text-center bg-[#F5B800] text-xs items-center justify-center gap-2 rounded text-xs"
-      : "h-8 w-32 bg-[#061426] text-white font-semibold border border-black text-black rounded text-xs";
+      ? "px-4 py-2 font-semibold text-black text-center bg-[#F5B800] text-xs items-center justify-center gap-2 rounded text-xs"
+      : "px-4 py-2 bg-[#061426] text-white font-semibold border border-black text-black rounded text-xs";
   }
 
   return (
@@ -90,7 +90,7 @@ function GraduatesList() {
                 alt={
                   player.title ? `${player.title} preview` : "Player portrait"
                 }
-                className="lg:w-3/6 rounded-xl"
+                className="lg:w-3/6 rounded-lg"
                 loading="lazy"
               />{" "}
             </div>
@@ -115,8 +115,8 @@ function GraduatesList() {
             </div>
             <p className="text-sm font-bold z-50 text-white">
               Joined Elite at the age of 17. His hardwork and dedication earned
-              him a move to FC Van in Armenia and later to FC Rashvan in
-              Tajikistan.
+              him moves to FC Van and West Armenia, both in Armenia and later to
+              FC Rashvan in Tajikistan.
             </p>
           </div>
         </div>

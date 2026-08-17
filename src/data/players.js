@@ -38,11 +38,11 @@ export const players = [
 
   {
     id: 5,
-    name: "Ikechukwu Kalu",
+    name: "Ifeanyi Iheonye",
     category: "In Academy",
-    image: "/images/aikay17.webp",
+    image: "/images/ifeanyi.webp",
     description:
-      "Ikechukwu, an Elite FC All Stars Academy product, is currently on trials with a leading European academy.",
+      "Ifeanyi, an Elite FC All Stars Academy product, is currently on trials with a leading European academy.",
   },
   {
     id: 6,

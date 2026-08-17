@@ -2,6 +2,7 @@ import { Manrope } from "next/font/google";
 
 import "./globals.css";
 import HeaderWrapper from "./components/HeadWrapper";
+import Footer from "./components/Footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col w-full items-center">
         <HeaderWrapper />
         {children}
+        <Footer />
       </body>
     </html>
   );
