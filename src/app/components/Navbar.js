@@ -68,7 +68,7 @@ function Navbar() {
               ${
                 isActive
                   ? " text-[#F5B800] border-b-2 border-b-[#F5B800] pb-px"
-                  : "text-white hover:border-b-2 hover:border-b-[#F5B800] hover:pb-px"
+                  : "text-white hover:border-b-2 hover:border-b-[#F5B800] hover:pb-px hover:text-[#F5B800] transition-colors duration-300"
               }
             `}
               >
@@ -103,7 +103,7 @@ function Navbar() {
 
         <div
           id={mobileMenuId}
-          className={open ? "overlay" : "overlay active"}
+          className={open ? "overlay active" : "overlay"}
           onClick={(e) => e.stopPropagation()}
           role="dialog"
           aria-modal="true"

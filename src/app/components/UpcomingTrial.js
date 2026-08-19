@@ -6,8 +6,8 @@ function UpcomingTrial() {
   const year = new Date().getFullYear();
 
   return (
-    <section className="bg-white w-full h-full">
-      <div className="bg-slate-100 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl">
+    <section className="bg-white w-full h-full md:grid md:grid-cols-2">
+      <div className="bg-slate-100 w-[90%] mx-auto h-auto flex flex-col gap-4 p-6 my-4 rounded-lg ">
         <div>
           <h1 className="font-bold">UPCOMING TRIAL</h1>
         </div>
@@ -21,7 +21,7 @@ function UpcomingTrial() {
             />
           </div>
 
-          <article className="flex flex-col gap-4 text-xs">
+          <article className="flex flex-col gap-4 text-xs font-bold">
             <p className="text-gray-700">
               <time dateTime="2026-12-24T09:00">
                 Saturday, 24th October {year}, <br /> 9:00 AM
@@ -33,7 +33,8 @@ function UpcomingTrial() {
             </address>
             <Link href="/form">
               <button
-                className="bg-[#F5B800] text-xs text-black font-semibold px-8 py-3 rounded-md"
+                className="bg-[#F5B800] border border-[#F5B800] text-xs text-black font-semibold px-10 py-3 rounded-md hover:text-[#061426] transition-all duration-300 ease-out
+    hover:translate-y-1 cursor-pointer hover:bg-transparent"
                 type="button"
                 aria-label="Register"
               >
@@ -45,17 +46,19 @@ function UpcomingTrial() {
         </div>
       </div>
       <div
-        className="bg-slate-100 w-[90%] mx-auto h-auto flex flex-col gap-4 p-4 my-4 rounded-2xl"
+        className="bg-slate-100 w-[90%] mx-auto h-auto flex flex-col gap-4 p-6 my-4 rounded-lg"
         aria-labelledby="testimonials"
       >
         <h2 id="testimonials" className="font-bold">
           PARENT TESTIMONIAL
         </h2>
         <article className="flex flex-col gap-6">
-          <blockquote className="text-gray-600 flex gap-4 text-xs">
+          <blockquote className="text-gray-600 flex gap-4 text-xs font-bold">
             <FaQuoteLeft size={50} color="#F5B800" />
-            Elite Football Club All Stars didn&apos;t just improve my son&apos;s
-            game; it shaped his character and discipline.
+            Elite Football Club All Stars didn&apos;t just{" "}
+            <br className="hidden md:block" />
+            improve my son&apos;s game; it shaped his{" "}
+            <br className="hidden md:block" /> character and discipline.
           </blockquote>
           <footer className="flex  items-center gap-4">
             <Image

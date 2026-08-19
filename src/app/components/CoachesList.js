@@ -12,7 +12,7 @@ function CoachesList({ coaches }) {
         <h2 className="font-bold text-[#061426]">LEADERSHIP</h2>
 
         {president && (
-          <article className="flex flex-col bg-gray-100 p-6 gap-6 rounded-lg">
+          <article className="flex flex-col bg-gray-100 p-6 gap-6 rounded-lg md:flex md:flex-row">
             <Image
               src={president.image}
               alt={president.name}
@@ -37,9 +37,10 @@ function CoachesList({ coaches }) {
             </div>
           </article>
         )}
+      </div>
+      <h2 className="font-bold text-[#061426]">COACHING STAFF</h2>
 
-        <h2 className="font-bold text-[#061426]">COACHING STAFF</h2>
-
+      <div className="md:grid md:grid-cols-3 gap-4">
         {staff.map((coach) => (
           <article
             key={coach.id}

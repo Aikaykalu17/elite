@@ -18,8 +18,8 @@ function GraduatesList() {
 
   function getButtonStyle(category) {
     return activeFilter === category
-      ? "px-4 py-2 font-semibold text-black text-center bg-[#F5B800] text-xs items-center justify-center gap-2 rounded text-xs"
-      : "px-4 py-2 bg-[#061426] text-white font-semibold border border-black text-black rounded text-xs";
+      ? "px-4 py-2 font-semibold text-black text-center bg-[#F5B800] text-xs items-center justify-center gap-2 rounded text-xs cursor-pointer"
+      : "px-4 py-2 bg-[#061426] text-white font-semibold border border-black text-black rounded text-xs cursor-pointer";
   }
 
   return (
@@ -29,7 +29,7 @@ function GraduatesList() {
           Filter players by category
         </label>
 
-        <div className="grid grid-cols-2  gap-4 border border-slate-400 w-full p-4 rounded-lg ">
+        <div className="grid grid-cols-2 gap-4 border border-slate-400 w-full p-4 rounded-lg md:flex md:flex-row md:w-max">
           <button
             type="button"
             onClick={() => handleFilter("All Players")}
@@ -59,7 +59,7 @@ function GraduatesList() {
           {filteredPlayers.map((player) => (
             <div
               key={player.id}
-              className="flex flex-col-reverse lg:flex lg:flex-col border border-slate-400 p-4 gap-2 rounded-lg"
+              className="flex flex-col-reverse lg:flex lg:flex-col border border-slate-400 p-4 gap-2 rounded-lg md:flex md:flex-col"
             >
               <div>
                 <p className="text-stone-500 font-bold text-sm">
@@ -99,7 +99,11 @@ function GraduatesList() {
         <div>
           <div
             className="h-125 relative overflow-hidden  bg-center bg-no-repeat bg-cover px-4 pt-16 flex flex-col gap-4 rounded"
-            style={{ backgroundImage: "url('/images/ebuka.webp')" }}
+            style={{
+              backgroundImage: "url('/images/ebuka.webp')",
+              backgroundPosition: "center top",
+              backgroundSize: "cover",
+            }}
           >
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/10 via-slate-900/40 to-slate-900/20" />
             <h2 className="text-[#F5B800] font-bold text-xl z-50">
@@ -115,8 +119,9 @@ function GraduatesList() {
             </div>
             <p className="text-sm font-bold z-50 text-white">
               Joined Elite at the age of 17. His hardwork and dedication earned
-              him moves to FC Van and West Armenia, both in Armenia and later to
-              FC Rashvan in Tajikistan.
+              him moves to FC Van <br className="hidden md:block" />
+              and West Armenia, both in Armenia and later to FC Rashvan in
+              Tajikistan.
             </p>
           </div>
         </div>

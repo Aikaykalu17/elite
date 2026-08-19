@@ -39,10 +39,11 @@ export const players = [
   {
     id: 5,
     name: "Ifeanyi Iheonye",
-    category: "In Academy",
+    category: "Currently Pro",
     image: "/images/ifeanyi.webp",
     description:
-      "Ifeanyi, an Elite FC All Stars Academy product, is currently on trials with a leading European academy.",
+      "Ifeanyi, an Elite FC All Stars Academy product, i currently plays for Getafe in La Liga.",
+    league: "La Liga",
   },
   {
     id: 6,

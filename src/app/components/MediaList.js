@@ -36,7 +36,7 @@ function MediaList({ media }) {
 
   return (
     <div className="flex flex-col items-center gap-4 pb-6 border border-[#F5B800] rounded-sm">
-      <div className="flex justify-between gap-2 border border-[#F5B800] p-2 rounded w-full ">
+      <div className="flex justify-between gap-2 border border-[#F5B800] p-2 rounded w-full mt-2 md:w-[90%]">
         <button
           onClick={() => handleFilter("image")}
           className={getButtonStyle("image")}
