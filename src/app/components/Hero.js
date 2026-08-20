@@ -5,7 +5,7 @@ import Link from "next/link";
 function Hero() {
   return (
     <section
-      className="relative w-full aspect-4/5 md:aspect-video  md:h-[40vh] lg:h-[90vh] bg-cover bg-center flex flex-col justify-end gap-4 py-4 px-4 mt-4 md:mt-0 md:justify-center-safe md:px-10 md:gap-6 md:pt-20"
+      className="relative w-full aspect-4/5 md:aspect-video  md:h-[40vh] lg:h-[90vh] bg-cover bg-center flex flex-col justify-end gap-2 py-4 px-4 mt-4 md:mt-0 md:justify-center-safe md:px-10 md:gap-6 md:pt-20"
       style={{
         backgroundImage: "url('/images/EliteFootballer.webp')",
         backgroundPosition: "center top",
@@ -29,25 +29,19 @@ function Hero() {
         </p>
       </div>
       <div className="flex gap-6">
-        <Link href="/form">
-          <button
-            className="bg-[#F5B800] border border-transparent text-black text-xs font-semibold py-3 px-8  rounded-md hover:bg-transparent hover:border-[#F5B800] hover:text-white transition-all duration-300 ease-out
-    hover:translate-y-1 cursor-pointer"
-            type="button"
-            aria-label="Join us now"
-          >
-            JOIN US NOW
-          </button>
+        <Link
+          href="/form"
+          className="bg-[#F5B800] border border-transparent text-black text-xs font-semibold py-3 px-8 rounded-md hover:bg-transparent hover:border-[#F5B800] hover:text-white transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer inline-flex items-center justify-center"
+          aria-label="Join us now"
+        >
+          JOIN US NOW
         </Link>
-        <Link href="/about-us">
-          <button
-            className="border transition-all duration-300 ease-out
-  hover:-translate-y-1 cursor-pointer border-[#F5B800] text-xs text-white font-semibold py-3 px-8 rounded-md md:hover:bg-[#F5B800] hover:text-[#061426] "
-            type="button"
-            aria-label="Learn more"
-          >
-            LEARN MORE
-          </button>
+        <Link
+          href="/about-us"
+          className="border transition-all duration-300 ease-out hover:-translate-y-1 cursor-pointer border-[#F5B800] text-xs text-white font-semibold py-3 px-8 rounded-md md:hover:bg-[#F5B800] hover:text-[#061426] inline-flex items-center justify-center"
+          aria-label="Learn more"
+        >
+          WHO WE ARE
         </Link>
       </div>
     </section>

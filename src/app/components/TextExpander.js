@@ -18,7 +18,7 @@ function TextExpander({ children }) {
         aria-expanded={isExpanded}
         className="text-primary-700 border-b border-primary-700 leading-3 pb-1 inline"
       >
-        {isExpanded ? "Show less" : "Show more"}
+        {isExpanded ? "Show less" : "Read more"}
       </button>
     </span>
   );

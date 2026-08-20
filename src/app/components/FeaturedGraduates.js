@@ -12,7 +12,7 @@ function FeaturedGraduates() {
     <section aria-label="Player Profiles" className="w-full bg-white py-4">
       <div className="w-[90%] mx-auto flex flex-col gap-6">
         <div className="flex flex-row justify-between items-center">
-          <h1 className="font-bold">OUR GRADUATES</h1>
+          <h2 className="font-bold">OUR GRADUATES</h2>
           <Link
             href="/graduates"
             className="text-xs font-bold flex flex-row justify-between items-center"

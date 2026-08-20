@@ -29,6 +29,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid #f5b800;
+  outline-offset: 3px;
+}
+
 .hamburger {
   width: 28px;
   height: 20px;

@@ -42,24 +42,18 @@ function Navbar() {
   const mobileMenuId = "mobile-navigation";
 
   return (
-    <nav className="bg-[#061426] flex justify-between items-center h-20 w-full  fixed left-0 top-0 z-50">
+    <nav className="bg-[#061426] flex justify-between items-center h-18 w-full fixed left-0 top-0 z-50">
       <div className="px-4 flex justify-between items-center w-full">
         <div className="z-50   flex justify-between items-center">
-          {/* <Image
+          <Image
             src="/eliteBgTrns.webp"
             alt="Elite Football Club All Stars logo"
             width={100}
             height={150}
             priority
-            style={{ objectFit: "contain", width: "100%", height: "100%" }}
-          /> */}
-          <Image
-            src={open ? "/eliteBgTrns.webp" : "/eliteBgTrns.webp"}
-            alt="Elite Football Club All Stars logo"
-            width={100}
-            height={150}
-            priority
-            style={{ objectFit: "contain", width: "100%", height: "100%" }}
+            loading="eager"
+            sizes="(max-width: 768px) 100px, 120px"
+            style={{ objectFit: "contain" }}
           />
         </div>
         {/* Nav links for desktop view */}
@@ -104,6 +98,7 @@ function Navbar() {
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={open}
             aria-controls={mobileMenuId}
+            aria-haspopup="true"
           >
             <span></span>
             <span></span>
@@ -115,8 +110,6 @@ function Navbar() {
           id={mobileMenuId}
           className={open ? "overlay active" : "overlay"}
           onClick={(e) => e.stopPropagation()}
-          role="dialog"
-          aria-modal="true"
           aria-label="Mobile navigation menu"
         >
           <Hamburger navItems={navItems} onClose={handleClick} isOpen={open} />

@@ -13,6 +13,8 @@ function RegistrationForm() {
   const [status, setStatus] = useState("idle");
   const [state, setState] = useState("");
 
+  const isDisabled = status === "success";
+
   function calculateAge(dob) {
     const birthDate = new Date(dob);
     const today = new Date();
@@ -135,7 +137,7 @@ function RegistrationForm() {
   return (
     <div className="w-full bg-white ">
       <div className="py-8 flex flex-col gap-6  items-start rounded-l-sm rounded-r-sm w-[90%] mx-auto  md:flex md:flex-row landscape:grid landscape:grid-cols-2">
-        <Reveal direction="left">
+        <Reveal>
           <form
             aria-labelledby="form-title"
             className="flex flex-col gap-4 pb-4 flex-1"
@@ -157,6 +159,7 @@ function RegistrationForm() {
                   required
                   placeholder="Enter your full name"
                   className="border border-slate-400 rounded py-2 px-4 text-xs"
+                  disabled={isDisabled}
                 />
               </div>
 
@@ -169,6 +172,7 @@ function RegistrationForm() {
                   required
                   placeholder="Phone number"
                   className="border border-slate-400 rounded py-2 px-4 text-xs"
+                  disabled={isDisabled}
                 />
               </div>
             </div>
@@ -178,10 +182,12 @@ function RegistrationForm() {
                 value={position}
                 onValueChange={setPosition}
                 name="position"
+                disabled={isDisabled}
               >
                 <Select.Trigger
                   id="position"
                   className="flex items-center justify-between border border-slate-400 rounded py-2 px-4 text-xs bg-white"
+                  disabled={isDisabled}
                 >
                   <Select.Value placeholder="Select position" />
                   <Select.Icon>
@@ -221,7 +227,8 @@ function RegistrationForm() {
                 name="dob"
                 type="date"
                 required
-                className="border border-slate-400 rounded py-2 px-4 text-xs"
+                className="border border-slate-400 rounded py-2 px-4 text-xs w-full"
+                disabled={isDisabled}
               />
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -234,6 +241,7 @@ function RegistrationForm() {
                   required
                   placeholder="Email Address"
                   className="border border-slate-400 rounded py-2 px-4 text-xs"
+                  disabled={isDisabled}
                 />
               </div>
               <div className="text-xs flex flex-col gap-0.5">
@@ -242,10 +250,12 @@ function RegistrationForm() {
                   value={state}
                   onValueChange={setState}
                   name="state"
+                  disabled={isDisabled}
                 >
                   <Select.Trigger
                     id="state"
                     className="flex items-center justify-between border border-slate-400 rounded py-2 px-4 text-xs bg-white"
+                    disabled={isDisabled}
                   >
                     <Select.Value placeholder="Select state" />
                     <Select.Icon>
@@ -286,14 +296,14 @@ function RegistrationForm() {
                 name="message"
                 placeholder="Preferred foot, height, weight, years of experience, previous club or academy (if any), alternative positions you can play, and anything else we should know."
                 className="border border-slate-400 rounded py-2 px-4 text-xs w-full h-32 resize-none overflow-y-auto"
+                disabled={isDisabled}
               />
             </div>
             <button
               type="submit"
-              disabled={status === "sending"}
-              className="bg-[#F5B800] text-xs text-black font-semibold py-4 px-20 rounded-md self-center disabled:opacity-50 flex items-center justify-center gap-2"
+              disabled={isDisabled || status === "sending"}
+              className="bg-[#F5B800] text-xs text-black font-semibold py-4 px-20 rounded-md self-center disabled:opacity-50 flex items-center justify-center gap-2 transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-transparent border border-[#F5B800]"
             >
-              {/* {status === "sending" && "Submitting..."} */}
               {status === "sending" && <SpinnerMini />}
               {status === "success" && (
                 <CheckCircle
@@ -306,30 +316,32 @@ function RegistrationForm() {
                 status !== "success" &&
                 "SUBMIT APPLICATION"}
             </button>
-            {status === "success" && (
-              <p className="text-green-600 text-xs text-center">
-                Application received! We&apos;ll reach out via the email you
-                provided if you&apos;re selected for a trial. Please avoid
-                submitting multiple applications — duplicate entries may lead to
-                automatic disqualification.
-              </p>
-            )}
-            {status === "error" && (
-              <p className="text-red-600 text-xs text-center">
-                Something went wrong. Please try again.
-              </p>
-            )}
-            {status === "ageInvalid" && (
-              <p className="text-red-600 text-xs text-center">
-                Applicants must be between 6 and 25 years old.
-              </p>
-            )}
+            <div aria-live="polite">
+              {status === "success" && (
+                <p role="status" className="text-green-600 text-xs text-center">
+                  Application received! We&apos;ll reach out via the email you
+                  provided if you&apos;re selected for a trial. Please avoid
+                  submitting multiple applications — duplicate entries may lead
+                  to automatic disqualification.
+                </p>
+              )}
+              {status === "error" && (
+                <p role="alert" className="text-red-600 text-xs text-center">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+              {status === "ageInvalid" && (
+                <p role="alert" className="text-red-600 text-xs text-center">
+                  Applicants must be between 6 and 25 years old.
+                </p>
+              )}
+            </div>
           </form>
         </Reveal>
         {/* <div className="h-full w-px bg-gray-500 hidden md:block"></div> */}
 
         <div className="flex flex-col w-full gap-8 md:flex-1">
-          <Reveal direction="right">
+          <Reveal>
             <div className=" flex flex-col items-start gap-2">
               <h2 className="font-extrabold">Requirements</h2>
               <ul className="flex flex-col gap-2 list-none">
@@ -378,7 +390,7 @@ function RegistrationForm() {
             </div>
           </dl>
 
-          <Reveal direction="up">
+          <Reveal>
             <div className="flex flex-col gap-4">
               <h2 className="text-[#061426] font-extrabold">FAQS</h2>
               <FaqList faqs={faqs} />

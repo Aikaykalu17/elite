@@ -13,15 +13,11 @@ function page() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      >
-        <h1 className="text-white font-bold pt-8 text-xl md:text-5xl">
-          ABOUT US
-        </h1>
-      </div>
+      ></div>
       <div className=" bg-white h-full">
         <div className="w-[90%] mx-auto flex flex-col pt-6 pb-8 gap-4 md:gap-8">
           <div className="flex flex-col gap-4 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2">
-            <Reveal direction="left">
+            <Reveal>
               <div className="md:flex md:flex-col md:gap-8">
                 <h2 className="text-[#061426] font-bold">OUR STORY</h2>
                 <p className="text-gray-500 text-xs ">
@@ -43,7 +39,7 @@ function page() {
               className="rounded-lg place-self-center"
               fetchPriority="high"
             />
-            <Reveal direction="right">
+            <Reveal>
               <div className="bg-slate-100 h-40 flex flex-col justify-evenly p-6 rounded-lg md:p-4 md:justify-items-normal md:px-8">
                 <h3 className="font-bold text-[#061426]">OUR MISSION</h3>
                 <p className="text-gray-500 text-xs font-bold">
@@ -53,7 +49,7 @@ function page() {
                 </p>
               </div>
             </Reveal>
-            <Reveal direction="left">
+            <Reveal>
               <div className="bg-slate-100 h-40 flex flex-col justify-evenly p-6 rounded-lg">
                 <h3 className="font-bold text-[#061426]">OUR VISION</h3>
                 <p className="text-gray-500 text-xs font-bold">
@@ -89,7 +85,7 @@ function page() {
               </div>
             </div>
           </Reveal>
-          <Reveal direction="right">
+          <Reveal>
             <div className="flex flex-col gap-4 ">
               <h3 className="text-[#061426] text-center font-bold text-lg">
                 OUR FACILITIES

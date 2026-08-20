@@ -10,7 +10,7 @@ function UpcomingTrial() {
       <div className="w-[90%] mx-auto flex flex-col justify-between  md:grid md:grid-cols-2 gap-4">
         <div className="bg-slate-100  h-auto flex flex-col gap-4 p-6 my-4 rounded-lg">
           <div>
-            <h1 className="font-bold">UPCOMING TRIAL</h1>
+            <h2 className="font-bold">UPCOMING TRIAL</h2>
           </div>
 
           <div className="flex flex-row gap-4">
@@ -26,7 +26,7 @@ function UpcomingTrial() {
             <article className="flex flex-col gap-4 text-xs font-bold">
               <p className="text-gray-700">
                 <time dateTime="2026-10-24T09:00">
-                  Saturday, 24th October {year}, <br /> 9:00 AM
+                  Saturday, 24th November {year}, <br /> 9:00 AM
                 </time>
               </p>
 
@@ -38,14 +38,12 @@ function UpcomingTrial() {
                 Open to ages 7–25. Limited slots available.
               </p>
 
-              <Link href="/form">
-                <button
-                  className="bg-[#F5B800] border border-[#F5B800] text-xs text-black font-semibold px-10 py-3 rounded-md hover:text-[#061426] transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-transparent w-fit"
-                  type="button"
-                  aria-label="Register"
-                >
-                  REGISTER
-                </button>
+              <Link
+                href="/form"
+                className="bg-[#F5B800] border border-[#F5B800] text-xs text-black font-semibold px-10 py-3 rounded-md hover:text-[#061426] transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-transparent w-fit inline-flex items-center justify-center"
+                aria-label="Register"
+              >
+                REGISTER
               </Link>
             </article>
           </div>

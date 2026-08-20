@@ -57,7 +57,7 @@ function Stats() {
               <CountUp end={25} />
             </span>
             <span className="text-[0.71875rem] md:text-[0.625rem] text-white lg:text-base">
-              TITLES CLAIMED
+              TITLES WON
             </span>
           </div>
         </div>

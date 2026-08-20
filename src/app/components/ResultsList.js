@@ -15,7 +15,7 @@ function ResultsList({ results }) {
 
   return (
     <>
-      <Reveal direction="right">
+      <Reveal>
         <div className="flex flex-col items-center gap-2 border border-slate-300 rounded-sm pb-2">
           <ul className="list-none flex flex-col gap-1 w-full">
             {visibleResults.map((result, i) => (
