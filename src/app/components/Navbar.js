@@ -17,6 +17,7 @@ function Navbar() {
     { href: "/about-us", label: "ABOUT" },
     { href: "/coaches", label: "COACHES" },
     { href: "/programs", label: "PROGRAMS" },
+    { href: "/news", label: "NEWS & UPDATES" },
     { href: "/graduates", label: "GRADUATES" },
     { href: "/fixtures", label: "FIXTURES" },
     { href: "/contact", label: "CONTACT" },
@@ -54,8 +55,8 @@ function Navbar() {
           />
         </div>
         {/* Nav links for desktop view */}
-        <nav className="hidden md:flex gap-2">
-          {navLinks.map(({ href, label }) => {
+        <nav className="hidden md:flex gap-2 lg:flex landscape:flex">
+          {navLinks.slice(0, 4).map(({ href, label }) => {
             const isActive = pathname === href;
 
             return (
@@ -77,7 +78,7 @@ function Navbar() {
             );
           })}
         </nav>
-        <Link href="/form" className="hidden md:block">
+        <Link href="/form" className="hidden md:block landscape:flex">
           <button
             className="py-4 px-8 rounded-lg bg-[#F5B800] text-xs text-[#061426] font-bold cursor-pointer border md:hover:bg-transparent md:hover:text-white transition-all duration-300 ease-out
     hover:translate-y-1 hover:shadow-[0_8px_20px_rgba(255,255,255,0.15)]"
@@ -86,7 +87,7 @@ function Navbar() {
           </button>
         </Link>
         {/* Hamburger biutton */}
-        <div className="md:hidden">
+        <div className="md:hidden landscape:hidden">
           <button
             type="button"
             className={open ? "hamburger open" : "hamburger"}

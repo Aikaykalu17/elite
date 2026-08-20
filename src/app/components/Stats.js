@@ -17,11 +17,11 @@ function Stats() {
           />
 
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white md:text-base">
+            <span className="text-sm font-bold text-white lg:text-base">
               <CountUp end={8} />
             </span>
-            <span className="text-[0.71875rem] text-white md:text-base">
-              TEAM RANKINGS
+            <span className="text-[0.71875rem] md:text-[0.625rem] text-white lg:text-base">
+              SEASONS OF EXCELLENCE
             </span>
           </div>
         </div>
@@ -35,11 +35,11 @@ function Stats() {
             aria-hidden="true"
           />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white md:text-base">
-              <CountUp end={120} />
+            <span className="text-sm font-bold text-white lg:text-base">
+              <CountUp end={70} />
             </span>
-            <span className="text-[0.71875rem] text-white md:text-base">
-              GRADUATES
+            <span className="text-[0.71875rem] md:text-[0.625rem] text-white lg:text-base">
+              TALENTS DEVELOPED
             </span>
           </div>
         </div>
@@ -52,11 +52,11 @@ function Stats() {
             aria-hidden="true"
           />
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-white md:text-base">
+            <span className="text-sm font-bold text-white lg:text-base">
               <CountUp end={25} />
             </span>
-            <span className="text-[0.71875rem] text-white md:text-base">
-              TROPHIES WON
+            <span className="text-[0.71875rem] md:text-[0.625rem] text-white lg:text-base">
+              TITLES CLAIMED
             </span>
           </div>
         </div>
@@ -72,8 +72,8 @@ function Stats() {
             <span className="text-sm font-bold text-white md:text-base">
               <CountUp end={100} />
             </span>
-            <span className="text-[0.71875rem] text-white md:text-base">
-              ACTIVE PLAYERS
+            <span className="text-[0.71875rem] md:text-[0.625rem] text-white md:text-base lg:text-base">
+              RISING STARS
             </span>
           </div>
         </div>

@@ -23,9 +23,10 @@ function Hero() {
         </h1>
       </div>
       <div>
-        <p className="text-white text-xs font-semibold">Developing Talents.</p>
-        <p className="text-white text-xs font-semibold">Building Character.</p>
-        <p className="text-white text-xs font-semibold">Raising Champions.</p>
+        <p className="text-white text-xs font-semibold">
+          Developing Talents. <br /> Building Character. <br /> Raising
+          Champions.
+        </p>
       </div>
       <div className="flex gap-6">
         <Link href="/form">
@@ -40,7 +41,7 @@ function Hero() {
         </Link>
         <Link href="/about-us">
           <button
-            className="bordtransition-all duration-300 ease-out
+            className="border transition-all duration-300 ease-out
   hover:-translate-y-1 cursor-pointer border-[#F5B800] text-xs text-white font-semibold py-3 px-8 rounded-md md:hover:bg-[#F5B800] hover:text-[#061426] "
             type="button"
             aria-label="Learn more"

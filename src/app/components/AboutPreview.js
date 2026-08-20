@@ -10,7 +10,7 @@ function AboutPreview() {
           <h1 className="text-[#061426] md:text-2xl font-bold">
             FOOTBALL CLUB <br className="md:hidden" /> ALL STARS
           </h1>
-          <p className="text-[#0D2038] font-bold text-xs">
+          <p className="text-gray-600 font-bold text-xs">
             We are a leading football academy in Nigeria,{" "}
             <br className="hidden md:block" /> committed to discovering,
             nurturing and <br className="hidden md:block" /> developing young
@@ -34,8 +34,10 @@ function AboutPreview() {
             width={1036}
             height={1024}
             alt="Six Nigerian footballers proudly standing with their backs to the camera, wearing the same blue-and-yellow “ELITE FC” kit."
-            className="rounded-lg object-cover md:h-80 md:w-auto"
-            // style={{ width: "auto", height: "auto" }}
+            // className="rounded-lg object-cover lg:h-80 lg:w-auto"
+            // fill
+            sizes="(max-width: 768px) 90vw, 400px"
+            className="rounded-lg object-cover"
           />
         </div>
       </div>

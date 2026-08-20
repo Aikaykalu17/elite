@@ -32,7 +32,7 @@ const faqs = [
     id: 6,
     question: "How will I know if my child was selected?",
     answer:
-      "Our team will contact you directly via the email address you provided on the application form. Please avoid submitting multiple applications to avoid automatic disqualification.",
+      "Our team will contact you directly via the email address you provided on the application form. To avoid automatic disqualification, please do not submit multiple applications.",
   },
   {
     id: 7,

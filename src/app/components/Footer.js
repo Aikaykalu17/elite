@@ -27,10 +27,10 @@ function Footer() {
           aria-label="Social Links"
           className="flex flex-col gap-4 md:text-center md:justify-evenly"
         >
-          <h2 className="text-white text-sm ">QUICK LINKS</h2>
+          <h2 className="text-white text-sm font-bold">EXPLORE CLUB</h2>
           <div className="flex flex-row gap-6 justify-evenly">
             <ul
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-4 md:items-center"
               aria-label="Footer Social Links"
             >
               <li>
@@ -60,6 +60,14 @@ function Footer() {
               </li>
               <li>
                 <Link
+                  href="/news"
+                  className="text-white flex items-center text-xs transition-colors duration-300 hover:text-[#F5B800]"
+                >
+                  News & Updates
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/programs"
                   className="text-white flex items-center text-xs transition-colors duration-300 hover:text-[#F5B800]"
                 >
@@ -75,7 +83,7 @@ function Footer() {
                 </Link>
               </li>
             </ul>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-4 md:items-center">
               <li>
                 <Link
                   href="fixtures"
@@ -113,9 +121,9 @@ function Footer() {
         </nav>
       </div>
       <div className="h-auto bg-slate-700 w-px hidden md:block"></div>
-      <div className="flex flex-col justify-center text-xs w-[90%] mx-auto gap-6 md:flex md:flex-row md:justify-evenly md:w-full md:m-0">
+      <div className="flex flex-col justify-center text-xs w-[90%] mx-auto gap-6 md:flex md:flex-col md:justify-evenly md:w-full md:m-0 lg:flex-row">
         <div className="flex flex-col gap-4 ">
-          <h3 className="text-white font'bold">CONTACT US</h3>
+          <h3 className="text-white font-bold">CONTACT US</h3>
           <div className="flex gap-6 items-center text-xs">
             <FaPhoneAlt color="#F5B800" title="Phone call icon" />
             <a

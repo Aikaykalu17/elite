@@ -17,6 +17,7 @@ export async function POST(request) {
         <p><strong>State:</strong> ${data.state}</p>
         <p><strong>Phone Number:</strong> ${data.phoneNumber}</p>
         <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong> ${data.message}</p>
       `,
     });
 

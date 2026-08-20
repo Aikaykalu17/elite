@@ -23,7 +23,7 @@ function GraduatesList() {
   }
 
   return (
-    <section id="players" className="w-full pt-4">
+    <div id="players" className="w-full pt-4">
       <div className="flex flex-col gap-4 w-[90%] mx-auto pb-4 pt-4 border-t border-slate-200 ">
         <label htmlFor="player-filter" className="sr-only">
           Filter players by category
@@ -55,11 +55,11 @@ function GraduatesList() {
           </button>
           <div className="hidden h-auto w-px bg-slate-400"></div>
         </div>
-        <div className="md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-4">
+        <div className="md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-4 landscape:grid landscape:grid-cols-2">
           {filteredPlayers.map((player) => (
             <div
               key={player.id}
-              className="flex flex-col-reverse lg:flex lg:flex-col border border-slate-400 p-4 gap-2 rounded-lg md:flex md:flex-col"
+              className="md:flex md:flex-col-reverse flex flex-col-reverse border border-slate-400 p-4 gap-2 rounded-lg "
             >
               <div>
                 <p className="text-stone-500 font-bold text-sm">
@@ -83,16 +83,19 @@ function GraduatesList() {
                   ""
                 )}
               </div>
-              <Image
-                src={player.image}
-                height={100}
-                width={100}
-                alt={
-                  player.title ? `${player.title} preview` : "Player portrait"
-                }
-                className="lg:w-3/6 rounded-lg"
-                loading="lazy"
-              />{" "}
+              <div className="relative w-full aspect-square mx-auto">
+                <Image
+                  src={player.image}
+                  alt={
+                    player.title ? `${player.title} preview` : "Player portrait"
+                  }
+                  fill
+                  sizes="(max-width: 768px) 100vw, 200px"
+                  // sizes="128px"
+                  className="rounded-lg object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -126,7 +129,7 @@ function GraduatesList() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
