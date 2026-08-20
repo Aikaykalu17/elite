@@ -43,15 +43,23 @@ function Navbar() {
 
   return (
     <nav className="bg-[#061426] flex justify-between items-center h-20 w-full  fixed left-0 top-0 z-50">
-      <div className="w-[90%] mx-auto flex justify-between items-center">
-        <div>
-          <Image
+      <div className="px-4 flex justify-between items-center w-full">
+        <div className="z-50   flex justify-between items-center">
+          {/* <Image
             src="/eliteBgTrns.webp"
             alt="Elite Football Club All Stars logo"
             width={100}
             height={150}
             priority
-            style={{ width: "auto", height: "auto" }}
+            style={{ objectFit: "contain", width: "100%", height: "100%" }}
+          /> */}
+          <Image
+            src={open ? "/eliteBgTrns.webp" : "/eliteBgTrns.webp"}
+            alt="Elite Football Club All Stars logo"
+            width={100}
+            height={150}
+            priority
+            style={{ objectFit: "contain", width: "100%", height: "100%" }}
           />
         </div>
         {/* Nav links for desktop view */}
@@ -65,11 +73,12 @@ function Navbar() {
                 href={href}
                 aria-current={isActive ? "page" : undefined} // screen reader support
                 className={`
-              px-4 py-3  text-xs font-bold 
+              px-4 py-3  text-xs font-bold  transition-all duration-300 ease-out
+    hover:translate-y-1 cursor-pointer
               ${
                 isActive
-                  ? " text-[#F5B800] border-b-2 border-b-[#F5B800] pb-px"
-                  : "text-white hover:border-b-2 hover:border-b-[#F5B800] hover:pb-px hover:text-[#F5B800] transition-colors duration-300"
+                  ? " text-[#F5B800] border-b-2 border-b-[#F5B800] pb-px "
+                  : "text-white hover:border-b-2 hover:border-b-[#F5B800] hover:pb-px hover:text-[#F5B800]"
               }
             `}
               >

@@ -6,6 +6,7 @@ import { ChevronDown, Check, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import faqs from "@/data/faqs";
 import FaqList from "./FaqList";
+import Reveal from "./Reveal";
 
 function RegistrationForm() {
   const [position, setPosition] = useState("");
@@ -134,114 +135,55 @@ function RegistrationForm() {
   return (
     <div className="w-full bg-white ">
       <div className="py-8 flex flex-col gap-6  items-start rounded-l-sm rounded-r-sm w-[90%] mx-auto  md:flex md:flex-row landscape:grid landscape:grid-cols-2">
-        <form
-          aria-labelledby="form-title"
-          className="flex flex-col gap-4 pb-4 flex-1"
-          onSubmit={handleSubmit}
-        >
-          <h2
-            id="form-title"
-            className="text-[#061426] text-center font-extrabold text-lg"
+        <Reveal direction="left">
+          <form
+            aria-labelledby="form-title"
+            className="flex flex-col gap-4 pb-4 flex-1"
+            onSubmit={handleSubmit}
           >
-            Trial Application Form
-          </h2>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="text-xs flex flex-col gap-0.5">
-              <label htmlFor="fullName">Full Name</label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                required
-                placeholder="Enter your full name"
-                className="border border-slate-400 rounded py-2 px-4 text-xs"
-              />
-            </div>
-
-            <div className="text-xs flex flex-col gap-0.5">
-              <label htmlFor="phoneNumber">Phone Number</label>
-              <input
-                id="phoneNumber"
-                name="phoneNumber"
-                type="tel"
-                required
-                placeholder="Phone number"
-                className="border border-slate-400 rounded py-2 px-4 text-xs"
-              />
-            </div>
-          </div>
-          <div className="text-xs flex flex-col gap-0.5">
-            <label htmlFor="position">Select Position</label>
-            <Select.Root
-              value={position}
-              onValueChange={setPosition}
-              name="position"
+            <h2
+              id="form-title"
+              className="text-[#061426] text-center font-extrabold text-lg"
             >
-              <Select.Trigger
-                id="position"
-                className="flex items-center justify-between border border-slate-400 rounded py-2 px-4 text-xs bg-white"
-              >
-                <Select.Value placeholder="Select position" />
-                <Select.Icon>
-                  <ChevronDown size={14} />
-                </Select.Icon>
-              </Select.Trigger>
+              Trial Application Form
+            </h2>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="text-xs flex flex-col gap-0.5">
+                <label htmlFor="fullName">Full Name</label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  required
+                  placeholder="Enter your full name"
+                  className="border border-slate-400 rounded py-2 px-4 text-xs"
+                />
+              </div>
 
-              <Select.Portal>
-                <Select.Content
-                  position="popper"
-                  side="bottom"
-                  sideOffset={4}
-                  className="bg-white border border-slate-300 rounded shadow-md text-xs overflow-hidden z-50 max-h-60"
-                >
-                  <Select.Viewport className="p-1">
-                    {positions.map((pos) => (
-                      <Select.Item
-                        key={pos.value}
-                        value={pos.value}
-                        className="flex items-center justify-between px-3 py-2 rounded cursor-pointer outline-none data-highlighted:bg-[#F5B800] data-highlighted:text-[#061426]"
-                      >
-                        <Select.ItemText>{pos.label}</Select.ItemText>
-                        <Select.ItemIndicator>
-                          <Check size={14} />
-                        </Select.ItemIndicator>
-                      </Select.Item>
-                    ))}
-                  </Select.Viewport>
-                </Select.Content>
-              </Select.Portal>
-            </Select.Root>
-          </div>
-          <div className="text-xs flex flex-col gap-0.5">
-            <label htmlFor="dob">Date of Birth</label>
-            <input
-              id="dob"
-              name="dob"
-              type="date"
-              required
-              className="border border-slate-400 rounded py-2 px-4 text-xs"
-            />
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="text-xs flex flex-col gap-0.5">
-              <label htmlFor="email">Email Address</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder="Email Address"
-                className="border border-slate-400 rounded py-2 px-4 text-xs"
-              />
+              <div className="text-xs flex flex-col gap-0.5">
+                <label htmlFor="phoneNumber">Phone Number</label>
+                <input
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="tel"
+                  required
+                  placeholder="Phone number"
+                  className="border border-slate-400 rounded py-2 px-4 text-xs"
+                />
+              </div>
             </div>
             <div className="text-xs flex flex-col gap-0.5">
-              <label htmlFor="state">State</label>
-              <Select.Root value={state} onValueChange={setState} name="state">
+              <label htmlFor="position">Select Position</label>
+              <Select.Root
+                value={position}
+                onValueChange={setPosition}
+                name="position"
+              >
                 <Select.Trigger
-                  id="state"
+                  id="position"
                   className="flex items-center justify-between border border-slate-400 rounded py-2 px-4 text-xs bg-white"
                 >
-                  <Select.Value placeholder="Select state" />
+                  <Select.Value placeholder="Select position" />
                   <Select.Icon>
                     <ChevronDown size={14} />
                   </Select.Icon>
@@ -255,13 +197,13 @@ function RegistrationForm() {
                     className="bg-white border border-slate-300 rounded shadow-md text-xs overflow-hidden z-50 max-h-60"
                   >
                     <Select.Viewport className="p-1">
-                      {nigeriaStates.map((s) => (
+                      {positions.map((pos) => (
                         <Select.Item
-                          key={s}
-                          value={s}
+                          key={pos.value}
+                          value={pos.value}
                           className="flex items-center justify-between px-3 py-2 rounded cursor-pointer outline-none data-highlighted:bg-[#F5B800] data-highlighted:text-[#061426]"
                         >
-                          <Select.ItemText>{s}</Select.ItemText>
+                          <Select.ItemText>{pos.label}</Select.ItemText>
                           <Select.ItemIndicator>
                             <Check size={14} />
                           </Select.ItemIndicator>
@@ -272,81 +214,149 @@ function RegistrationForm() {
                 </Select.Portal>
               </Select.Root>
             </div>
-          </div>
-          <div className="text-xs flex flex-col gap-0.5">
-            <label htmlFor="message">Tell Us About Yourself (Optional)</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Preferred foot, height, weight, years of experience, previous club or academy (if any), alternative positions you can play, and anything else we should know."
-              className="border border-slate-400 rounded py-2 px-4 text-xs w-full h-32 resize-none overflow-y-auto"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="bg-[#F5B800] text-xs text-black font-semibold py-4 px-20 rounded-md self-center disabled:opacity-50 flex items-center justify-center gap-2"
-          >
-            {/* {status === "sending" && "Submitting..."} */}
-            {status === "sending" && <SpinnerMini />}
-            {status === "success" && (
-              <CheckCircle
-                size={30}
-                color="#059669"
-                className="animate-bounce"
+            <div className="text-xs flex flex-col gap-0.5">
+              <label htmlFor="dob">Date of Birth</label>
+              <input
+                id="dob"
+                name="dob"
+                type="date"
+                required
+                className="border border-slate-400 rounded py-2 px-4 text-xs"
               />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="text-xs flex flex-col gap-0.5">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Email Address"
+                  className="border border-slate-400 rounded py-2 px-4 text-xs"
+                />
+              </div>
+              <div className="text-xs flex flex-col gap-0.5">
+                <label htmlFor="state">State</label>
+                <Select.Root
+                  value={state}
+                  onValueChange={setState}
+                  name="state"
+                >
+                  <Select.Trigger
+                    id="state"
+                    className="flex items-center justify-between border border-slate-400 rounded py-2 px-4 text-xs bg-white"
+                  >
+                    <Select.Value placeholder="Select state" />
+                    <Select.Icon>
+                      <ChevronDown size={14} />
+                    </Select.Icon>
+                  </Select.Trigger>
+
+                  <Select.Portal>
+                    <Select.Content
+                      position="popper"
+                      side="bottom"
+                      sideOffset={4}
+                      className="bg-white border border-slate-300 rounded shadow-md text-xs overflow-hidden z-50 max-h-60"
+                    >
+                      <Select.Viewport className="p-1">
+                        {nigeriaStates.map((s) => (
+                          <Select.Item
+                            key={s}
+                            value={s}
+                            className="flex items-center justify-between px-3 py-2 rounded cursor-pointer outline-none data-highlighted:bg-[#F5B800] data-highlighted:text-[#061426]"
+                          >
+                            <Select.ItemText>{s}</Select.ItemText>
+                            <Select.ItemIndicator>
+                              <Check size={14} />
+                            </Select.ItemIndicator>
+                          </Select.Item>
+                        ))}
+                      </Select.Viewport>
+                    </Select.Content>
+                  </Select.Portal>
+                </Select.Root>
+              </div>
+            </div>
+            <div className="text-xs flex flex-col gap-0.5">
+              <label htmlFor="message">Tell Us About Yourself (Optional)</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Preferred foot, height, weight, years of experience, previous club or academy (if any), alternative positions you can play, and anything else we should know."
+                className="border border-slate-400 rounded py-2 px-4 text-xs w-full h-32 resize-none overflow-y-auto"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="bg-[#F5B800] text-xs text-black font-semibold py-4 px-20 rounded-md self-center disabled:opacity-50 flex items-center justify-center gap-2"
+            >
+              {/* {status === "sending" && "Submitting..."} */}
+              {status === "sending" && <SpinnerMini />}
+              {status === "success" && (
+                <CheckCircle
+                  size={30}
+                  color="#059669"
+                  className="animate-bounce"
+                />
+              )}
+              {status !== "sending" &&
+                status !== "success" &&
+                "SUBMIT APPLICATION"}
+            </button>
+            {status === "success" && (
+              <p className="text-green-600 text-xs text-center">
+                Application received! We&apos;ll reach out via the email you
+                provided if you&apos;re selected for a trial. Please avoid
+                submitting multiple applications — duplicate entries may lead to
+                automatic disqualification.
+              </p>
             )}
-            {status !== "sending" &&
-              status !== "success" &&
-              "SUBMIT APPLICATION"}
-          </button>
-          {status === "success" && (
-            <p className="text-green-600 text-xs text-center">
-              Application received! We&apos;ll reach out via the email you
-              provided if you&apos;re selected for a trial. Please avoid
-              submitting multiple applications — duplicate entries may lead to
-              automatic disqualification.
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-red-600 text-xs text-center">
-              Something went wrong. Please try again.
-            </p>
-          )}
-          {status === "ageInvalid" && (
-            <p className="text-red-600 text-xs text-center">
-              Applicants must be between 6 and 25 years old.
-            </p>
-          )}
-        </form>
-        <div className="h-auto w-px bg-gray-500 hidden md:block"></div>
+            {status === "error" && (
+              <p className="text-red-600 text-xs text-center">
+                Something went wrong. Please try again.
+              </p>
+            )}
+            {status === "ageInvalid" && (
+              <p className="text-red-600 text-xs text-center">
+                Applicants must be between 6 and 25 years old.
+              </p>
+            )}
+          </form>
+        </Reveal>
+        {/* <div className="h-full w-px bg-gray-500 hidden md:block"></div> */}
 
         <div className="flex flex-col w-full gap-8 md:flex-1">
-          <div className=" flex flex-col items-start gap-2">
-            <h2 className="font-extrabold">Requirements</h2>
-            <ul className="flex flex-col gap-2 list-none">
-              <li className="flex items-center gap-2 text-xs">
-                <Check size={14} className="text-green-600" />
-                Age 7 and 25 years old
-              </li>
-              <li className="flex items-center gap-2 text-xs">
-                <Check size={14} className="text-green-600" />
-                Birth Certificate
-              </li>
-              <li className="flex items-center gap-2 text-xs">
-                <Check size={14} className="text-green-600" />
-                Training Kit & Boots
-              </li>
-              <li className="flex items-center gap-2 text-xs">
-                <Check size={14} className="text-green-600" />
-                Water Bottle
-              </li>
-              <li className="flex items-center gap-2 text-xs">
-                <Check size={14} className="text-green-600" />
-                Medical Fitness Certificate
-              </li>
-            </ul>
-          </div>
+          <Reveal direction="right">
+            <div className=" flex flex-col items-start gap-2">
+              <h2 className="font-extrabold">Requirements</h2>
+              <ul className="flex flex-col gap-2 list-none">
+                <li className="flex items-center gap-2 text-xs">
+                  <Check size={14} className="text-green-600" />
+                  Age 7 and 25 years old
+                </li>
+                <li className="flex items-center gap-2 text-xs">
+                  <Check size={14} className="text-green-600" />
+                  Birth Certificate
+                </li>
+                <li className="flex items-center gap-2 text-xs">
+                  <Check size={14} className="text-green-600" />
+                  Training Kit & Boots
+                </li>
+                <li className="flex items-center gap-2 text-xs">
+                  <Check size={14} className="text-green-600" />
+                  Water Bottle
+                </li>
+                <li className="flex items-center gap-2 text-xs">
+                  <Check size={14} className="text-green-600" />
+                  Medical Fitness Certificate
+                </li>
+              </ul>
+            </div>
+          </Reveal>
+
           <dl className="flex flex-col gap-2 md:w-max">
             <h2 className="text-[#061426] font-extrabold">Trial Fees</h2>
             <p className="text-xs text-gray-500">Fees vary by age category</p>
@@ -367,10 +377,13 @@ function RegistrationForm() {
               <dd className="text-[#061426] font-extrabold">₦150,000</dd>
             </div>
           </dl>
-          <div className="flex flex-col gap-4">
-            <h2 className="text-[#061426] font-extrabold">FAQS</h2>
-            <FaqList faqs={faqs} />
-          </div>
+
+          <Reveal direction="up">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-[#061426] font-extrabold">FAQS</h2>
+              <FaqList faqs={faqs} />
+            </div>
+          </Reveal>
         </div>
       </div>
     </div>

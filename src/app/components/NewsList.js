@@ -1,9 +1,11 @@
 "use client";
-
-import Image from "next/image";
 import { useState } from "react";
+
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Reveal from "./Reveal";
+
+import Image from "next/image";
 import TextExpander from "./TextExpander";
 
 function NewsList({ news }) {
@@ -22,35 +24,37 @@ function NewsList({ news }) {
     <div className="flex flex-col items-center w-full">
       <ul className="flex flex-col gap-4 md:grid md:grid-cols-3">
         {visibleMediaFiles.map((visibleMediaFile, i) => (
-          <li key={visibleMediaFile.id} className="flex flex-col gap-4 ">
-            <Image
-              src={
-                visibleMediaFile.mediaType === "video"
-                  ? visibleMediaFile.thumbnail
-                  : visibleMediaFile.src
-              }
-              alt={visibleMediaFile.alt}
-              width={1402}
-              height={1122}
-              sizes="(max-width: 768px) 50vw, 300px"
-              onClick={() => setIndex(i)}
-              className="rounded-lg object-cover object-top cursor-pointer fade-in w-full"
-              style={{ animationDelay: `${i * 100}ms`, height: "auto" }}
-            />
-            <div className="flex flex-col gap-2">
-              <div>
-                <p className="text-[#061426] font-bold text-sm inline-block">
-                  {visibleMediaFile.title}{" "}
-                  <span className="text-[0.6875rem] fade-in">
-                    <TextExpander>{visibleMediaFile.story}</TextExpander>
-                  </span>
-                </p>
+          <Reveal key={visibleMediaFile.id}>
+            <li key={visibleMediaFile.id} className="flex flex-col gap-4 ">
+              <Image
+                src={
+                  visibleMediaFile.mediaType === "video"
+                    ? visibleMediaFile.thumbnail
+                    : visibleMediaFile.src
+                }
+                alt={visibleMediaFile.alt}
+                width={1402}
+                height={1122}
+                sizes="(max-width: 768px) 50vw, 300px"
+                onClick={() => setIndex(i)}
+                className="rounded-lg object-cover object-top cursor-pointer fade-in w-full"
+                style={{ animationDelay: `${i * 100}ms`, height: "auto" }}
+              />
+              <div className="flex flex-col gap-2">
+                <div>
+                  <p className="text-[#061426] font-bold text-sm inline-block">
+                    {visibleMediaFile.title}{" "}
+                    <span className="text-[0.6875rem] fade-in">
+                      <TextExpander>{visibleMediaFile.story}</TextExpander>
+                    </span>
+                  </p>
+                </div>
+                <span className="text-gray-600 font-bold text-xs">
+                  {visibleMediaFile.date}
+                </span>
               </div>
-              <span className="text-gray-600 font-bold text-xs">
-                {visibleMediaFile.date}
-              </span>
-            </div>
-          </li>
+            </li>
+          </Reveal>
         ))}
       </ul>
 

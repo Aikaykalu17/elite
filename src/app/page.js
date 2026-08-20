@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
@@ -8,17 +9,32 @@ import UpcomingTrial from "./components/UpcomingTrial";
 import CTABanner from "./components/CTABanner";
 
 import HeaderWrapper from "./components/HeadWrapper";
+import Reveal from "./components/Reveal";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Reveal>
+        <Hero />
+      </Reveal>
+
       <HeaderWrapper />
-      <Stats />
-      <AboutPreview />
-      <FeaturedGraduates />
-      <UpcomingTrial />
-      <CTABanner />
+
+      <Reveal>
+        <Stats />
+      </Reveal>
+      <Reveal>
+        <AboutPreview />
+      </Reveal>
+      <Reveal>
+        <FeaturedGraduates />
+      </Reveal>
+      <Reveal>
+        <UpcomingTrial />
+      </Reveal>
+      <Reveal>
+        <CTABanner />
+      </Reveal>
     </>
   );
 }

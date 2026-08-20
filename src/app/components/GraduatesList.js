@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { players } from "@/data/players";
+import Reveal from "./Reveal";
 
 function GraduatesList() {
   const [activeFilter, setActiveFilter] = useState("All Players");
@@ -57,46 +58,50 @@ function GraduatesList() {
         </div>
         <div className="md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-4 landscape:grid landscape:grid-cols-2">
           {filteredPlayers.map((player) => (
-            <div
-              key={player.id}
-              className="md:flex md:flex-col-reverse flex flex-col-reverse border border-slate-400 p-4 gap-2 rounded-lg "
-            >
-              <div>
-                <p className="text-stone-500 font-bold text-sm">
-                  <span className="font-bold text-black ">Player Name:</span>{" "}
-                  {player.name}
-                </p>
-                <p className="text-stone-500 font-medium text-sm">
-                  <span className="font-bold text-black ">About Player:</span>{" "}
-                  {player.description}
-                </p>
-                <p className="text-stone-500 text-sm">
-                  <span className="font-bold text-black ">Career Stage:</span>{" "}
-                  {player.category}
-                </p>
-                {player.league ? (
-                  <p className="text-stone-500 text-sm">
-                    <span className="font-bold text-black ">League:</span>{" "}
-                    {player.league}{" "}
+            <Reveal key={player.id}>
+              <div
+                key={player.id}
+                className="md:flex md:flex-col-reverse flex flex-col-reverse border border-slate-400 p-4 gap-2 rounded-lg "
+              >
+                <div>
+                  <p className="text-stone-500 font-bold text-sm">
+                    <span className="font-bold text-black ">Player Name:</span>{" "}
+                    {player.name}
                   </p>
-                ) : (
-                  ""
-                )}
+                  <p className="text-stone-500 font-medium text-sm">
+                    <span className="font-bold text-black ">About Player:</span>{" "}
+                    {player.description}
+                  </p>
+                  <p className="text-stone-500 text-sm">
+                    <span className="font-bold text-black ">Career Stage:</span>{" "}
+                    {player.category}
+                  </p>
+                  {player.league ? (
+                    <p className="text-stone-500 text-sm">
+                      <span className="font-bold text-black ">League:</span>{" "}
+                      {player.league}{" "}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className="relative w-full aspect-square mx-auto">
+                  <Image
+                    src={player.image}
+                    alt={
+                      player.title
+                        ? `${player.title} preview`
+                        : "Player portrait"
+                    }
+                    fill
+                    sizes="(max-width: 768px) 100vw, 200px"
+                    // sizes="128px"
+                    className="rounded-lg object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-              <div className="relative w-full aspect-square mx-auto">
-                <Image
-                  src={player.image}
-                  alt={
-                    player.title ? `${player.title} preview` : "Player portrait"
-                  }
-                  fill
-                  sizes="(max-width: 768px) 100vw, 200px"
-                  // sizes="128px"
-                  className="rounded-lg object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            </Reveal>
           ))}
         </div>
         <div>

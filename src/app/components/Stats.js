@@ -3,6 +3,7 @@
 import CountUp from "@/app/components/CountUp";
 import { FaMedal, FaTrophy, FaUsers } from "react-icons/fa";
 import { HiOutlineAcademicCap } from "react-icons/hi2";
+import Reveal from "./Reveal";
 
 function Stats() {
   return (

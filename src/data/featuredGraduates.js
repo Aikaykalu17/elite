@@ -22,7 +22,7 @@ const featuredGraduates = [
   },
   {
     id: 4,
-    name: "Ifeanyi Iheonye",
+    name: "Iheonye Ifeanyi",
     club: "Getafe (Spain)",
     league: "La Liga",
     image: "/images/ifeanyi.webp",
