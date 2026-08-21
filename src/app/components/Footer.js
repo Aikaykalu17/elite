@@ -13,7 +13,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#061426] py-8 flex flex-col gap-6 md:flex md:flex-row md:justify-around md:w-[90%]">
+    <footer className="w-full mx-auto bg-[#061426] py-8 flex flex-col gap-6 md:flex md:flex-row md:justify-around md:w-[90%]">
       <div className="grid grid-cols-2 gap-4 w-[90%] mx-auto md:w-full md:m-0">
         <div>
           <Image
@@ -27,7 +27,7 @@ function Footer() {
           aria-label="Social Links"
           className="flex flex-col gap-4 md:text-center md:justify-evenly"
         >
-          <h2 className="text-white text-sm font-bold">EXPLORE CLUB</h2>
+          <h2 className="text-white text-sm font-bold">EXPLORE</h2>
           <div className="flex flex-row gap-6 justify-evenly">
             <ul
               className="flex flex-col gap-4 md:items-center"

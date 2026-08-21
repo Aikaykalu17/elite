@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { ShieldCheck, Users, BadgeCheck, Star } from "lucide-react";
-import Reveal from "../components/Reveal";
+import Reveal from "../../components/Reveal";
 
 function page() {
   return (

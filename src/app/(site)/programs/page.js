@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 import Image from "next/image";
-import Reveal from "../components/Reveal";
+import Reveal from "../../components/Reveal";
 
 function Page() {
   const month = new Date().toLocaleDateString("en-US", { month: "long" });

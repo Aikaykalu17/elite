@@ -19,8 +19,8 @@ function GraduatesList() {
 
   function getButtonStyle(category) {
     return activeFilter === category
-      ? "px-4 py-2 font-semibold text-black text-center bg-[#F5B800] text-xs items-center justify-center gap-2 rounded text-xs cursor-pointer"
-      : "px-4 py-2 bg-[#061426] text-white font-semibold border border-black text-black rounded text-xs cursor-pointer";
+      ? "px-4 py-2 font-semibold text-black text-center bg-[#F5B800] text-xs items-center justify-center gap-2 rounded border border-[#F5B800] cursor-pointer transition-all duration-300 ease-out hover:bg-[#061426] hover:text-white"
+      : "px-4 py-2 bg-[#061426] text-white font-semibold border border-[#061426] rounded text-xs cursor-pointer transition-all duration-300 ease-out hover:border-[#F5B800] hover:text-[#061426]  hover:bg-[#F5B800]";
   }
 
   return (
@@ -56,36 +56,44 @@ function GraduatesList() {
           </button>
           <div className="hidden h-auto w-px bg-slate-400"></div>
         </div>
-        <div className="md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-4 landscape:grid landscape:grid-cols-2">
+        <div className="md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-4 landscape:grid landscape:grid-cols-3">
           {filteredPlayers.map((player) => (
             <Reveal key={player.id}>
               <div
                 key={player.id}
-                className="md:flex md:flex-col-reverse flex flex-col-reverse border border-slate-400 p-4 gap-2 rounded-lg "
+                className="md:flex md:flex-col-reverse flex flex-col-reverse border border-slate-400 p-4 gap-2 rounded-lg h-full"
               >
-                <div>
-                  <p className="text-stone-500 font-bold text-sm">
-                    <span className="font-bold text-black ">Player Name:</span>{" "}
+                <div className="flex flex-col gap-1 flex-1">
+                  <p className="text-stone-500 font-bold text-xs">
+                    <span className="font-bold text-black text-sm">
+                      Player Name:
+                    </span>{" "}
                     {player.name}
                   </p>
-                  <p className="text-stone-500 font-medium text-sm">
-                    <span className="font-bold text-black ">About Player:</span>{" "}
+                  <p className="text-stone-500 font-medium text-xs">
+                    <span className="font-bold text-black text-sm">
+                      About Player:
+                    </span>{" "}
                     {player.description}
                   </p>
-                  <p className="text-stone-500 text-sm">
-                    <span className="font-bold text-black ">Career Stage:</span>{" "}
+                  <p className="text-stone-500 text-xs">
+                    <span className="font-bold text-black text-sm">
+                      Career Stage:
+                    </span>{" "}
                     {player.category}
                   </p>
                   {player.league ? (
-                    <p className="text-stone-500 text-sm">
-                      <span className="font-bold text-black ">League:</span>{" "}
+                    <p className="text-stone-500 text-xs">
+                      <span className="font-bold text-black text-sm">
+                        League:
+                      </span>{" "}
                       {player.league}{" "}
                     </p>
                   ) : (
                     ""
                   )}
                 </div>
-                <div className="relative w-full aspect-square mx-auto">
+                <div className="relative w-40 aspect-square self-start">
                   <Image
                     src={player.image}
                     alt={
@@ -94,8 +102,7 @@ function GraduatesList() {
                         : "Player portrait"
                     }
                     fill
-                    sizes="(max-width: 768px) 100vw, 200px"
-                    // sizes="128px"
+                    sizes="96px"
                     className="rounded-lg object-cover object-top"
                     loading="lazy"
                   />

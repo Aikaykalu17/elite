@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import useHeaderVisibility from "../hooks/useHeaderVisibility";
+import useHeaderVisibility from "../(site)/hooks/useHeaderVisibility";
 import Navbar from "./Navbar";
 
 export default function HeaderWrapper() {

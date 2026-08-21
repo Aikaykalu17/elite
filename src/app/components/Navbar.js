@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import Hamburger from "./Hamburger";
 import navItems from "@/data/navItems";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,14 +14,14 @@ function Navbar() {
 
   const navLinks = [
     { href: "/", label: "HOME" },
-    { href: "/about-us", label: "ABOUT" },
-    { href: "/coaches", label: "COACHES" },
+    { href: "/graduates", label: "GRADUATES" },
+    { href: "/gallery", label: "GALLERY" },
     { href: "/programs", label: "PROGRAMS" },
     { href: "/news", label: "NEWS & UPDATES" },
-    { href: "/graduates", label: "GRADUATES" },
+    { href: "/about-us", label: "WHO WE ARE" },
     { href: "/fixtures", label: "FIXTURES" },
+    { href: "/coaches", label: "COACHES" },
     { href: "/contact", label: "CONTACT" },
-    { href: "/gallery", label: "GALLERY" },
   ];
 
   // Disables homepage scrolling whenever open is true.
@@ -43,7 +43,7 @@ function Navbar() {
 
   return (
     <nav className="bg-[#061426] flex justify-between items-center h-18 w-full fixed left-0 top-0 z-50">
-      <div className="px-4 flex justify-between items-center w-full">
+      <div className="px-6 flex justify-between items-center w-full">
         <div className="z-50   flex justify-between items-center">
           <Image
             src="/eliteBgTrns.webp"
@@ -67,14 +67,13 @@ function Navbar() {
                 href={href}
                 aria-current={isActive ? "page" : undefined} // screen reader support
                 className={`
-              px-4 py-3  text-xs font-bold  transition-all duration-300 ease-out
-    hover:translate-y-1 cursor-pointer
-              ${
-                isActive
-                  ? " text-[#F5B800] border-b-2 border-b-[#F5B800] pb-px "
-                  : "text-white hover:border-b-2 hover:border-b-[#F5B800] hover:pb-px hover:text-[#F5B800]"
-              }
-            `}
+  px-4 py-3 text-xs font-bold border-b-2 transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer
+  ${
+    isActive
+      ? "text-[#F5B800] border-b-[#F5B800]"
+      : "text-white border-b-transparent hover:border-b-[#F5B800] hover:text-[#F5B800]"
+  }
+`}
               >
                 {label}
               </Link>
@@ -84,7 +83,7 @@ function Navbar() {
         <Link href="/form" className="hidden md:block landscape:flex">
           <button
             className="py-4 px-8 rounded-lg bg-[#F5B800] text-xs text-[#061426] font-bold cursor-pointer border md:hover:bg-transparent md:hover:text-white transition-all duration-300 ease-out
-    hover:translate-y-1 hover:shadow-[0_8px_20px_rgba(255,255,255,0.15)]"
+    hover:translate-y-1"
           >
             JOIN NOW
           </button>

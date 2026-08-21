@@ -36,7 +36,7 @@ function MediaList({ media }) {
 
   return (
     <div className="flex flex-col items-center gap-4 pb-6 border border-[#F5B800] rounded-sm">
-      <div className="flex justify-between gap-2 border border-[#F5B800] p-2 rounded w-full lg:mt-2 md:w-[90%]">
+      <div className="flex justify-between gap-2 border border-[#F5B800] p-2 rounded w-[95%] mt-4  lg:mt-2 md:w-[90%]">
         <button
           onClick={() => handleFilter("image")}
           className={getButtonStyle("image")}
@@ -52,7 +52,7 @@ function MediaList({ media }) {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 gap-1">
+      <div className="grid grid-cols-2 md:grid md:grid-cols-3 gap-2 px-2">
         {visibleMediaFiles.map((item, i) => (
           <Image
             key={item.id}
@@ -62,7 +62,7 @@ function MediaList({ media }) {
             height={1122}
             sizes="(max-width: 768px) 50vw, 300px"
             onClick={() => setIndex(i)}
-            className="rounded-lg object-cover cursor-pointer fade-in"
+            className="rounded-sm object-cover cursor-pointer fade-in"
             style={{ animationDelay: `${i * 100}ms` }}
           />
         ))}

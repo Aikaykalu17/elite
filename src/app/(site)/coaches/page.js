@@ -1,4 +1,4 @@
-import CoachesList from "../components/CoachesList";
+import CoachesList from "../../components/CoachesList";
 import coaches from "@/data/coaches";
 
 function Page() {

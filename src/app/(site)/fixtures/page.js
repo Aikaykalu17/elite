@@ -2,9 +2,9 @@ import fixtures from "@/data/fixtures";
 import results from "@/data/results";
 import table from "@/data/table";
 
-import FixturesList from "../components/FixturesList";
-import ResultsList from "../components/ResultsList";
-import TableList from "../components/TableList";
+import FixturesList from "../../components/FixturesList";
+import ResultsList from "../../components/ResultsList";
+import TableList from "../../components/TableList";
 
 function Page() {
   const year = new Date().getFullYear();

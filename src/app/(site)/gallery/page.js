@@ -1,5 +1,5 @@
 import media from "@/data/media";
-import MediaList from "../components/MediaList";
+import MediaList from "../../components/MediaList";
 
 function Page() {
   return (

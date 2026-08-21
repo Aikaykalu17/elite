@@ -9,7 +9,7 @@ function CTABanner() {
             READY TO START YOUR JOURNEY?
           </h2>
           <p className="text-white text-center text-xs">
-            Join Elite Stars Football Club All Stars today{" "}
+            Join Elite Football Club All Stars today{" "}
             <br className="md:hidden" /> and take the first step towards your{" "}
             <br className="md:hidden" /> dream.
           </p>

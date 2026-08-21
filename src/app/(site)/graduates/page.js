@@ -1,4 +1,4 @@
-import GraduatesList from "../components/GraduatesList";
+import GraduatesList from "../../components/GraduatesList";
 
 function Page() {
   return (

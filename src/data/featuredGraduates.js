@@ -17,7 +17,7 @@ const featuredGraduates = [
     id: 3,
     name: "Ndubuaku Casper",
     club: "AFC Coventry (UK)",
-    league: "Peter Bromwich Premier Division",
+    league: "EPL",
     image: "/images/casper.webp",
   },
   {

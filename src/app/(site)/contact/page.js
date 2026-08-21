@@ -3,7 +3,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
-import Reveal from "../components/Reveal";
+import Reveal from "../../components/Reveal";
 
 function Page() {
   return (

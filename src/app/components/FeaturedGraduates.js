@@ -27,14 +27,14 @@ function FeaturedGraduates() {
               key={player.id}
               className="border border-slate-200 rounded-lg overflow-hidden"
             >
-              <div className="relative w-full aspect-square">
+              <div className="relative w-full aspect-square ">
                 <Image
                   src={player.image}
                   alt={player.name}
                   fill
                   // sizes="(max-width: 768px) 45vw, 200px"
-                  sizes="128px"
-                  className="object-cover object-top"
+                  sizes="500px"
+                  className="object-cover object-top "
                 />
               </div>
               <div className="p-2 flex flex-col gap-1">

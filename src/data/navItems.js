@@ -16,12 +16,12 @@ import {
 const navItems = [
   { id: 1, label: "Home", href: "/", icon: HomeIcon },
   { id: 2, label: "About Us", href: "/about-us", icon: Info },
-  { id: 3, label: "Coaches", href: "/coaches", icon: UserRound },
-  { id: 4, label: "Programs", href: "/programs", icon: BookOpen },
-  { id: 5, label: "Graduates", href: "/graduates", icon: GraduationCap },
+  { id: 3, label: "Graduates", href: "/graduates", icon: GraduationCap },
+  { id: 4, label: "Gallery", href: "/gallery", icon: Image },
+  { id: 5, label: "News", href: "/news", icon: Newspaper },
   { id: 6, label: "Fixtures & Results", href: "/fixtures", icon: CalendarDays },
-  { id: 7, label: "Gallery", href: "/gallery", icon: Image },
-  { id: 8, label: "News", href: "/news", icon: Newspaper },
+  { id: 7, label: "Coaches", href: "/coaches", icon: UserRound },
+  { id: 8, label: "Programs", href: "/programs", icon: BookOpen },
   { id: 9, label: "Join Us", href: "/form", icon: UserPlus },
   { id: 10, label: "Contact Us", href: "/contact", icon: Phone },
 ];

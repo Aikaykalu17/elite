@@ -1,13 +1,13 @@
 "use client";
 
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import AboutPreview from "./components/AboutPreview";
-import FeaturedGraduates from "./components/FeaturedGraduates";
-import UpcomingTrial from "./components/UpcomingTrial";
-import CTABanner from "./components/CTABanner";
+import Hero from "@/app/components/Hero";
+import Stats from "@/app/components/Stats";
+import AboutPreview from "@/app/components/AboutPreview";
+import FeaturedGraduates from "@/app/components/FeaturedGraduates";
+import UpcomingTrial from "@/app/components/UpcomingTrial";
+import CTABanner from "@/app/components/CTABanner";
 
-import Reveal from "./components/Reveal";
+import Reveal from "@/app/components/Reveal";
 
 export default function Home() {
   return (

@@ -17,7 +17,11 @@ function HamburgerList({ navItems, onClose }) {
               href={item.href}
               onClick={onClose}
               aria-current={isActive ? "page" : undefined}
-              className={isActive ? "text-[#F5B800] font-bold" : "text-white"}
+              className={
+                isActive
+                  ? "text-[#F5B800] font-bold text-xs"
+                  : "text-white text-xs"
+              }
             >
               {item.label}
             </Link>

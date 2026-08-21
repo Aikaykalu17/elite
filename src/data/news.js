@@ -15,7 +15,7 @@ const news = [
     title:
       "Our academy graduate, Alukwu Jonathan, signs for Asko Oedt in Austria.",
     date: "Jun 30, 2024",
-    src: "/images/jonaSigns.webp",
+    src: "/images/oedt.webp",
     alt: "Alukwu Jonathan signs for Asko Oedt in Austria.",
     mediaType: "image",
     story:

@@ -9,11 +9,24 @@ import FaqList from "./FaqList";
 import Reveal from "./Reveal";
 
 function RegistrationForm() {
-  const [position, setPosition] = useState("");
   const [status, setStatus] = useState("idle");
+  const [position, setPosition] = useState("");
   const [state, setState] = useState("");
 
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [dob, setDob] = useState("");
+  const [email, setEmail] = useState("");
+
   const isDisabled = status === "success";
+
+  const isFormValid =
+    fullName.trim() !== "" &&
+    phoneNumber.trim() !== "" &&
+    position !== "" &&
+    dob !== "" &&
+    state !== "" &&
+    email.trim() !== "";
 
   function calculateAge(dob) {
     const birthDate = new Date(dob);
@@ -136,7 +149,7 @@ function RegistrationForm() {
   }
   return (
     <div className="w-full bg-white ">
-      <div className="py-8 flex flex-col gap-6  items-start rounded-l-sm rounded-r-sm w-[90%] mx-auto  md:flex md:flex-row landscape:grid landscape:grid-cols-2">
+      <div className="py-8 flex flex-col gap-6  items-start rounded-l-sm rounded-r-sm w-[90%] mx-auto  md:flex md:flex-col landscape:grid landscape:grid-cols-2">
         <Reveal>
           <form
             aria-labelledby="form-title"
@@ -158,8 +171,9 @@ function RegistrationForm() {
                   type="text"
                   required
                   placeholder="Enter your full name"
-                  className="border border-slate-400 rounded py-2 px-4 text-xs"
+                  className="border border-slate-400 rounded py-2 px-4 text-xs outline-none"
                   disabled={isDisabled}
+                  onChange={(e) => setFullName(e.target.value)}
                 />
               </div>
 
@@ -171,8 +185,9 @@ function RegistrationForm() {
                   type="tel"
                   required
                   placeholder="Phone number"
-                  className="border border-slate-400 rounded py-2 px-4 text-xs"
+                  className="border border-slate-400 rounded py-2 px-4 text-xs focus:outline-none"
                   disabled={isDisabled}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
                 />
               </div>
             </div>
@@ -227,8 +242,9 @@ function RegistrationForm() {
                 name="dob"
                 type="date"
                 required
-                className="border border-slate-400 rounded py-2 px-4 text-xs w-full"
+                className="border border-slate-400 rounded py-2 px-4 text-xs w-full outline-none"
                 disabled={isDisabled}
+                onChange={(e) => setDob(e.target.value)}
               />
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -240,8 +256,9 @@ function RegistrationForm() {
                   type="email"
                   required
                   placeholder="Email Address"
-                  className="border border-slate-400 rounded py-2 px-4 text-xs"
+                  className="border border-slate-400 rounded py-2 px-4 text-xs outline-none"
                   disabled={isDisabled}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="text-xs flex flex-col gap-0.5">
@@ -295,27 +312,29 @@ function RegistrationForm() {
                 id="message"
                 name="message"
                 placeholder="Preferred foot, height, weight, years of experience, previous club or academy (if any), alternative positions you can play, and anything else we should know."
-                className="border border-slate-400 rounded py-2 px-4 text-xs w-full h-32 resize-none overflow-y-auto"
+                className="border border-slate-400 rounded py-2 px-4 text-xs w-full h-32 resize-none overflow-y-auto outline-none"
                 disabled={isDisabled}
               />
             </div>
-            <button
-              type="submit"
-              disabled={isDisabled || status === "sending"}
-              className="bg-[#F5B800] text-xs text-black font-semibold py-4 px-20 rounded-md self-center disabled:opacity-50 flex items-center justify-center gap-2 transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-transparent border border-[#F5B800]"
-            >
-              {status === "sending" && <SpinnerMini />}
-              {status === "success" && (
-                <CheckCircle
-                  size={30}
-                  color="#059669"
-                  className="animate-bounce"
-                />
-              )}
-              {status !== "sending" &&
-                status !== "success" &&
-                "SUBMIT APPLICATION"}
-            </button>
+            {isFormValid && (
+              <button
+                type="submit"
+                disabled={isDisabled || status === "sending"}
+                className="bg-[#F5B800] text-xs text-black font-semibold py-4 px-20 rounded-md self-center disabled:opacity-50 flex items-center justify-center gap-2 transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-transparent border border-[#F5B800]"
+              >
+                {status === "sending" && <SpinnerMini />}
+                {status === "success" && (
+                  <CheckCircle
+                    size={30}
+                    color="#059669"
+                    className="animate-bounce"
+                  />
+                )}
+                {status !== "sending" &&
+                  status !== "success" &&
+                  "SUBMIT APPLICATION"}
+              </button>
+            )}
             <div aria-live="polite">
               {status === "success" && (
                 <p role="status" className="text-green-600 text-xs text-center">
@@ -332,7 +351,7 @@ function RegistrationForm() {
               )}
               {status === "ageInvalid" && (
                 <p role="alert" className="text-red-600 text-xs text-center">
-                  Applicants must be between 6 and 25 years old.
+                  Applicants must be between 7 and 25 years old.
                 </p>
               )}
             </div>

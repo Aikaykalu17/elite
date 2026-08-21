@@ -2,7 +2,6 @@ import { Manrope } from "next/font/google";
 
 import "./globals.css";
 import HeaderWrapper from "./components/HeadWrapper";
-import Footer from "./components/Footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -43,19 +42,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col w-full items-center">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-[#F5B800] focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-[#061426]"
-        >
-          Skip to content
-        </a>
-
         <HeaderWrapper />
 
-        <main id="main-content" className="w-full">
+        <main id="main-content" className="w-full ">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

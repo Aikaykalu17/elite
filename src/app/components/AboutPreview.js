@@ -21,7 +21,7 @@ function AboutPreview() {
             href="/about-us"
             className="bg-[#F5B800] w-max  text-xs text-black font-semibold px-8 py-3 rounded-md border border-transparent hover:bg-transparent hover:border-[#F5B800] hover:text-[#061426] transition-all duration-300 ease-out hover:translate-y-1 hover:shadow-[0_8px_20px_rgba(255,255,255,0.15)] cursor-pointer inline-flex items-center justify-center"
           >
-            ABOUT US
+            WHO WE ARE
           </Link>
         </div>
         <div className="w-full md:flex md:justify-end">
@@ -34,6 +34,8 @@ function AboutPreview() {
             // fill
             sizes="(max-width: 768px) 90vw, 400px"
             className="rounded-lg object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </div>
