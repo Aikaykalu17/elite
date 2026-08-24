@@ -5,6 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   const data = await request.json();
 
+  console.log("Resend API Key:", process.env.RESEND_API_KEY);
   try {
     await resend.emails.send({
       from: "Elite FC Trial Applications <onboarding@resend.dev>",

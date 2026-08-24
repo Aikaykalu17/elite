@@ -16,7 +16,7 @@ export const metadata = {
     title: "Elite Football Academy",
     description:
       "Elite Football Club All Stars is a football academy in Abuja, Nigeria, discovering, developing and nurturing young talents into world-class footballers.",
-    url: "https://your-deployed-url.vercel.app",
+    url: "https://elite-five-rouge.vercel.app/",
     siteName: "Elite Football Academy",
     images: [
       {

@@ -3,7 +3,7 @@ export const players = [
     id: 1,
     name: "Alukwu Jonathan",
     category: "Currently Pro",
-    image: "/images/alukwu.webp",
+    image: "/images/alukwu7crop.webp",
     description:
       "Alukwu Jonathan developed at Elite FC All Stars Academy and now represents Borussia Dortmund in the German Bundesliga.",
     league: "Bundesliga",
