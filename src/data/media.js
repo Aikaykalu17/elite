@@ -37,7 +37,7 @@ const media = [
   },
   {
     id: 7,
-    src: "/images/slidingTackle.webp",
+    src: "/images/tackle.webp",
     alt: "Elite FC defender performing a sliding tackle on an opponent.",
     mediaType: "image",
   },
