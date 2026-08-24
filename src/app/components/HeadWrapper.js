@@ -38,7 +38,7 @@ export default function HeaderWrapper() {
           </motion.div>
         )}
       </AnimatePresence>
-      <div ref={targetRef}></div>
+      <div ref={targetRef} className="h-px w-full" aria-hidden="true"></div>
     </>
   );
 }
