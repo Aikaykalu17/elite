@@ -15,7 +15,7 @@ const results = [
     date: "2026-06-18",
     displayDate: "18 Jun",
     homeTeam: "Elite FC",
-    opponent: "Beyelsa United",
+    opponent: "Bayelsa United",
     venue: "Legacy Pitch",
     homeScore: 3,
     awayScore: 0,

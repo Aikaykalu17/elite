@@ -142,7 +142,7 @@ const leagueTable = [
   {
     id: 15,
     position: 15,
-    team: "Beyelsa United",
+    team: "Bayelsa United",
     played: 8,
     wins: 1,
     draws: 1,

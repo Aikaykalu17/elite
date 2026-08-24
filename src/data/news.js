@@ -19,7 +19,7 @@ const news = [
     alt: "Alukwu Jonathan signs for Asko Oedt in Austria.",
     mediaType: "image",
     story:
-      "Our pacy, skilful academy graduate has completed a permanent move to ASKÖ Oedt in Austria.Alukwu Jonathan began his professional career at Calabar Rovers after graduating from our academy, where his performances quickly drew attention. He then earned a move to Sporting Lagos, where he was named Player of the Season after scoring 12 goals and providing 6 assists in a standout campaign. His form also earned him a call-up to the Nigeria U-23 team.Jonathan has since spent two seasons with ASKÖ Oedt, tallying 19 goals and 11 assists across all competitions. In his debut season he registered 12 goals and 1 assist. He followed that with 7 goals and 10 assists in his second season.We are proud of his journey and wish him continued success in his career.",
+      "Our pacy, skilful academy graduate has completed a permanent move to ASKÖ Oedt in Austria. Alukwu Jonathan began his professional career at Calabar Rovers after graduating from our academy, where his performances quickly drew attention. He then earned a move to Sporting Lagos, where he was named Player of the Season after scoring 12 goals and providing 6 assists in a standout campaign. His form also earned him a call-up to the Nigeria U-23 team. Jonathan has since spent two seasons with ASKÖ Oedt, tallying 19 goals and 11 assists across all competitions. In his debut season he registered 12 goals and 1 assist. He followed that with 7 goals and 10 assists in his second season. We are proud of his journey and wish him continued success in his career.",
   },
   {
     id: 3,
