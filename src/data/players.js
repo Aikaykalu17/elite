@@ -5,7 +5,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/alukwu.webp",
     description:
-      "Alukwu Jonathan, an Elite FC All Stars Academy graduate, currently plays for Borussia Dortmund in the German Bundesliga.",
+      "Alukwu Jonathan developed at Elite FC All Stars Academy and now represents Borussia Dortmund in the German Bundesliga.",
     league: "Bundesliga",
   },
   {
@@ -14,7 +14,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/thirdHeadshot.webp",
     description:
-      "Ifeanyi Umeh, an Elite FC All Stars Academy graduate, currently plays for Club Brugge in Belgium’s Jupiler Pro League.",
+      "After coming through Elite FC All Stars Academy, Ifeanyi Umeh competes for Club Brugge in Belgium’s Jupiler Pro League.",
     league: "Jupiler Pro League",
   },
   {
@@ -23,7 +23,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/fourthHeadshot.webp",
     description:
-      "Temitope Adeyemi, an Elite FC All Stars Academy graduate, now plays for Galatasaray in the Turkish Süper Lig.",
+      "Temitope Adeyemi is an Elite FC All Stars Academy product who has gone on to join Galatasaray in the Turkish Süper Lig.",
     league: "Turkish Süper Lig",
   },
   {
@@ -33,7 +33,7 @@ export const players = [
     image: "/images/mugabiOwen.webp",
 
     description:
-      "Mugabi Owen, an Elite FC All Stars Academy graduate, is currently on trials with Ajax Academy in Europe.",
+      "Elite FC All Stars Academy alum Mugabi Owen is pursuing an opportunity through trials at Ajax Academy in Europe.",
   },
 
   {
@@ -42,7 +42,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/ifeanyi.webp",
     description:
-      "Ifeanyi, an Elite FC All Stars Academy product, i currently plays for Getafe in La Liga.",
+      "Ifeanyi came through Elite FC All Stars Academy and is now part of Getafe’s squad in La Liga.",
     league: "La Liga",
   },
   {
@@ -51,16 +51,16 @@ export const players = [
     category: "Currently Pro",
     image: "/images/blackHeadshot.webp",
     description:
-      "Chinedu Okeke, an Elite FC All Stars Academy graduate, plays for Enyimba FC in Nigeria’s NPFL.",
+      "Chinedu Okeke honed his game at Elite FC All Stars Academy before taking the field for Enyimba FC in Nigeria’s NPFL.",
     league: "NPFL",
   },
   {
     id: 7,
-    name: "Seun Adegoke",
+    name: "Uchechukwu Jude",
     category: "Currently Pro",
-    image: "/images/firstHeadshot.webp",
+    image: "/images/matic.webp",
     description:
-      "Seun Adegoke, an Elite FC All Stars Academy graduate, currently plays for Nordic United in Sweden’s Superettan (second division).",
+      "Uchechukwu Jude, who trained at Elite FC All Stars Academy, features for Nordic United in Sweden’s Superettan, the country’s second division.",
     league: "Superettan Sweden",
   },
   {
@@ -69,7 +69,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/casper.webp",
     description:
-      "Casper, an Elite FC All Stars Academy graduate, currently plays for AFC Coventry in the UK.",
+      "Elite FC All Stars Academy graduate Casper continues his professional journey with AFC Coventry in the UK.",
     league: "Peter Bromwich Premier Division",
   },
   {
@@ -78,7 +78,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/tested.webp",
     description:
-      "Okoronkwo Chukwuebuka, a professional footballer, currently plays for Fc Rashvan in Tajikistan.",
+      "Professional footballer Okoronkwo Chukwuebuka is based in Tajikistan, where he plays for FC Rashvan.",
     league: "Ligai Olii Tojikiston",
   },
 
@@ -88,7 +88,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/davidFinidi.webp",
     description:
-      "David Finidi, a professional footballer, currently plays for Real Betis in Spain’s La Liga.",
+      "David Finidi has established himself as a professional footballer with Real Betis in Spain’s La Liga.",
     league: "La Liga",
   },
   {
@@ -97,7 +97,7 @@ export const players = [
     category: "In Academy",
     image: "/images/wilsonObasi.webp",
     description:
-      "Wilson Obasi, an Elite FC All Stars Academy graduate, is currently on trials with Sporting Lisbon Academy in Portugal.",
+      "Wilson Obasi is an Elite FC All Stars Academy graduate currently seeking a place through trials at Sporting Lisbon Academy in Portugal.",
   },
 
   {
@@ -106,7 +106,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/afolabiJeremiah.webp",
     description:
-      "Afolabi Jeremiah, an Elite FC All Stars Academy graduate, is a professional footballer currently playing for Malmö FF in Sweden’s Allsvenskan.",
+      "Afolabi Jeremiah progressed from Elite FC All Stars Academy to professional football with Malmö FF in Sweden’s Allsvenskan.",
     league: "Allsvenskan, Sweden",
   },
   {
@@ -115,7 +115,7 @@ export const players = [
     category: "In Academy",
     image: "/images/jude.webp",
     description:
-      "Jude Etebo, an Elite FC All Stars Academy graduate, is currently on trials with PSV Eindhoven Academy in the Netherlands.",
+      "Jude Etebo, developed by Elite FC All Stars Academy, is testing his abilities during trials at PSV Eindhoven Academy in the Netherlands.",
   },
   {
     id: 14,
@@ -123,7 +123,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/sani.webp",
     description:
-      "Sani Ibrahim, an Elite FC All Stars Academy graduate, is a professional footballer currently playing for FC Basel in Switzerland’s Super League.",
+      "Sani Ibrahim moved from Elite FC All Stars Academy into the professional ranks and now plays for FC Basel in Switzerland’s Super League.",
     league: "Super League",
   },
   {
@@ -132,7 +132,7 @@ export const players = [
     category: "In Academy",
     image: "/images/chukwudi.webp",
     description:
-      "Chukwudi Obioma, an Elite FC All Stars Academy graduate, is currently on trials with Borussia Dortmund Academy in Germany.",
+      "Chukwudi Obioma is continuing his development with trials at Borussia Dortmund Academy in Germany after graduating from Elite FC All Stars Academy.",
   },
   {
     id: 16,
@@ -140,7 +140,7 @@ export const players = [
     category: "In Academy",
     image: "/images/lucky.webp",
     description:
-      "Lucky Dada, an Elite FC All Stars Academy graduate, is currently on trials with Olympique Lyonnais Academy in France.",
+      "Lucky Dada, an Elite FC All Stars Academy graduate, is working toward his next opportunity with Olympique Lyonnais Academy in France.",
   },
   {
     id: 17,
@@ -148,7 +148,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/michael.webp",
     description:
-      "Michael Alex, an Elite FC All Stars Academy graduate, is a professional footballer currently playing for FC Porto in Portugal’s Primeira Liga.",
+      "Michael Alex began his football journey at Elite FC All Stars Academy and now competes professionally for FC Porto in Portugal’s Primeira Liga.",
   },
   {
     id: 18,
@@ -156,7 +156,7 @@ export const players = [
     category: "Currently Pro",
     image: "/images/neto.webp",
     description:
-      "Netochukwu Chisom, an Elite FC All Stars Academy graduate, is a professional footballer currently playing for Avaí FC in Brazil’s Série B.",
+      "Netochukwu Chisom, who emerged from Elite FC All Stars Academy, is a professional player with Avaí FC in Brazil’s Série B.",
     league: "Serie B, Brazi",
   },
 ];

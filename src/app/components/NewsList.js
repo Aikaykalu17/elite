@@ -12,7 +12,7 @@ function NewsList({ news }) {
   const [showAll, setShowAll] = useState(false);
   const [index, setIndex] = useState(-1);
 
-  const visibleMediaFiles = showAll ? news : news.slice(0, 3);
+  const visibleMediaFiles = showAll ? news : news.slice(0, 4);
 
   const slides = visibleMediaFiles.map((item) =>
     item.mediaType === "video"
@@ -81,7 +81,7 @@ function NewsList({ news }) {
       {visibleMediaFiles.length > 2 && (
         <button
           onClick={() => setShowAll((prev) => !prev)}
-          className="px-6 py-2 text-[#061426] bg-[#F5B800] text-xs rounded-sm"
+          className="px-6 py-2 text-[#061426] bg-[#F5B800] text-xs rounded-sm  transition-all duration-300 ease-ou hover:bg-[#061426] hover:text-[#F5B800] cursor-pointer"
           type="button"
           aria-label="Show More"
         >

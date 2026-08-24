@@ -102,7 +102,7 @@ function GraduatesList() {
                         : "Player portrait"
                     }
                     fill
-                    sizes="96px"
+                    sizes="500px"
                     className="rounded-lg object-cover object-top"
                     loading="lazy"
                   />

@@ -4,7 +4,7 @@ const featuredGraduates = [
     name: "Alukwu Jonathan",
     club: "Asko Oedt (Austria)",
     league: "Regionalliga Mitte",
-    image: "/images/alukwu.webp",
+    image: "/images/alukwu7crop.webp",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const featuredGraduates = [
     name: "Ndubuaku Casper",
     club: "AFC Coventry (UK)",
     league: "EPL",
-    image: "/images/casper.webp",
+    image: "/images/trophycas.webp",
   },
   {
     id: 4,

@@ -153,7 +153,7 @@ function RegistrationForm() {
         <Reveal>
           <form
             aria-labelledby="form-title"
-            className="flex flex-col gap-4 pb-4 flex-1"
+            className="flex flex-col gap-4 pb-4 flex-1 border border-gray-500 p-4 rounded"
             onSubmit={handleSubmit}
           >
             <h2
@@ -388,26 +388,28 @@ function RegistrationForm() {
             </div>
           </Reveal>
 
-          <dl className="flex flex-col gap-2 md:w-max">
-            <h2 className="text-[#061426] font-extrabold">Trial Fees</h2>
-            <p className="text-xs text-gray-500">Fees vary by age category</p>
-            <div className="flex justify-between text-xs">
-              <dt>U-13</dt>
-              <dd className="text-[#061426] font-extrabold">₦60,000</dd>
-            </div>
-            <div className="flex justify-between text-xs">
-              <dt>U-15</dt>
-              <dd className="text-[#061426] font-extrabold">₦70,000</dd>
-            </div>
-            <div className="flex justify-between text-xs">
-              <dt>U-17</dt>
-              <dd className="text-[#061426] font-extrabold">₦100,000</dd>
-            </div>
-            <div className="flex justify-between text-xs">
-              <dt>Senior</dt>
-              <dd className="text-[#061426] font-extrabold">₦150,000</dd>
-            </div>
-          </dl>
+          <Reveal>
+            <dl className="flex flex-col gap-2 md:w-max">
+              <h2 className="text-[#061426] font-extrabold">Trial Fees</h2>
+              <p className="text-xs text-gray-500">Fees vary by age category</p>
+              <div className="flex justify-between text-xs">
+                <dt>U-13</dt>
+                <dd className="text-[#061426] font-extrabold">₦60,000</dd>
+              </div>
+              <div className="flex justify-between text-xs">
+                <dt>U-15</dt>
+                <dd className="text-[#061426] font-extrabold">₦70,000</dd>
+              </div>
+              <div className="flex justify-between text-xs">
+                <dt>U-17</dt>
+                <dd className="text-[#061426] font-extrabold">₦100,000</dd>
+              </div>
+              <div className="flex justify-between text-xs">
+                <dt>Senior</dt>
+                <dd className="text-[#061426] font-extrabold">₦150,000</dd>
+              </div>
+            </dl>
+          </Reveal>
 
           <Reveal>
             <div className="flex flex-col gap-4">

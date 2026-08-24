@@ -22,7 +22,7 @@ const navItems = [
   { id: 6, label: "Fixtures & Results", href: "/fixtures", icon: CalendarDays },
   { id: 7, label: "Coaches", href: "/coaches", icon: UserRound },
   { id: 8, label: "Programs", href: "/programs", icon: BookOpen },
-  { id: 9, label: "Join Us", href: "/form", icon: UserPlus },
+  { id: 9, label: "Apply for a Trial ", href: "/form", icon: UserPlus },
   { id: 10, label: "Contact Us", href: "/contact", icon: Phone },
 ];
 

@@ -42,7 +42,7 @@ function Navbar() {
   const mobileMenuId = "mobile-navigation";
 
   return (
-    <nav className="bg-[#061426] flex justify-between items-center h-18 w-full fixed left-0 top-0 z-50">
+    <nav className="bg-[#0D2038] flex justify-between items-center h-18 w-full fixed left-0 top-0 z-50">
       <div className="px-6 flex justify-between items-center w-full">
         <div className="z-50   flex justify-between items-center">
           <Image
@@ -85,7 +85,7 @@ function Navbar() {
             className="py-4 px-8 rounded-lg bg-[#F5B800] text-xs text-[#061426] font-bold cursor-pointer border md:hover:bg-transparent md:hover:text-white transition-all duration-300 ease-out
     hover:translate-y-1"
           >
-            JOIN NOW
+            APPLY FOR A TRIAL
           </button>
         </Link>
         {/* Hamburger biutton */}

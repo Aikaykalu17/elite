@@ -22,7 +22,7 @@ function Page() {
   return (
     <section className="w-full mt-20">
       <div className="flex flex-col gap-4">
-        <div className="bg-[#061426] flex flex-col items-center justify-center gap-4 py-4">
+        <div className=" flex flex-col items-center justify-center gap-4 py-4">
           <h1 className="text-white font-bold">PROGRAMS AND TRAINING</h1>
           <p className="text-white font-bold text-center text-xs">
             Structured programs for every level

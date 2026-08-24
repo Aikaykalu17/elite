@@ -30,13 +30,13 @@ function MediaList({ media }) {
 
   function getButtonStyle(category) {
     return activeFilter === category
-      ? "px-12 py-2 text-[#061426] bg-[#F5B800] text-xs rounded-sm"
-      : "px-12 py-2 text-white bg-[#061426] text-xs rounded-sm border border-[#F5B800]";
+      ? "px-12 py-2 text-[#061426] bg-[#F5B800] text-xs rounded-sm cursor-pointer transition-all duration-300 ease-out hover:translate-y-1 hover:bg-[#061426] border border-[#F5B800] hover:text-[#F5B800]"
+      : "px-12 py-2 text-white bg-[#061426] text-xs rounded-sm border border-[#F5B800] cursor-pointer transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-[#F5B800] border border-[#F5B800] hover:text-[#061426]";
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 pb-6 border border-[#F5B800] rounded-sm">
-      <div className="flex justify-between gap-2 border border-[#F5B800] p-2 rounded w-[95%] mt-4  lg:mt-2 md:w-[90%]">
+    <div className="flex flex-col items-center gap-4 pb-6  rounded-sm">
+      <div className="flex justify-between gap-2 border border-[#F5B800] p-2 md:px-8 rounded mt-4 lg:mt-2 md:self-start">
         <button
           onClick={() => handleFilter("image")}
           className={getButtonStyle("image")}
@@ -71,7 +71,7 @@ function MediaList({ media }) {
       {filteredMediaFiles.length > 4 && (
         <button
           onClick={() => setShowAll((prev) => !prev)}
-          className="px-6 py-2 text-[#061426] bg-[#F5B800] text-xs rounded-sm"
+          className="px-6 py-2 text-[#061426] bg-[#F5B800] text-xs rounded-sm cursor-pointer transition-all duration-300 ease-out hover:translate-y-1 hover:bg-[#061426] border border-[#F5B800] hover:text-[#F5B800]"
           type="button"
           aria-label="Show More"
         >

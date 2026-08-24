@@ -9,9 +9,11 @@ function CTABanner() {
             READY TO START YOUR JOURNEY?
           </h2>
           <p className="text-white text-center text-xs">
-            Join Elite Football Club All Stars today{" "}
-            <br className="md:hidden" /> and take the first step towards your{" "}
-            <br className="md:hidden" /> dream.
+            Join Elite Football Club All Stars today
+            <br className="md:hidden [@media(orientation:landscape)_and_(max-height:500px)]:hidden" />{" "}
+            and take the first step towards your
+            <br className="md:hidden [@media(orientation:landscape)_and_(max-height:500px)]:hidden" />{" "}
+            dream.
           </p>
         </div>
         <Link
@@ -19,7 +21,7 @@ function CTABanner() {
           className="bg-[#F5B800] border text-black font-semibold px-8 py-3 text-xs rounded-md transition-all duration-300 ease-out hover:bg-transparent hover:text-white hover:-translate-y-1 cursor-pointer inline-flex items-center justify-center"
           aria-label="Enroll Now"
         >
-          ENROLL NOW
+          APPLY FOR A TRIAL
         </Link>
       </div>
     </section>

@@ -3,11 +3,10 @@
 import CountUp from "@/app/components/CountUp";
 import { FaMedal, FaTrophy, FaUsers } from "react-icons/fa";
 import { HiOutlineAcademicCap } from "react-icons/hi2";
-import Reveal from "./Reveal";
 
 function Stats() {
   return (
-    <section className="w-full flex justify-center items-center h-full">
+    <section className="w-full flex justify-center items-center h-full bg-[#0D2038]">
       <div className="grid grid-cols-2 gap-6  w-[90%] py-8 md:flex md:justify-between">
         <div className="flex items-center gap-2">
           <FaMedal
@@ -27,7 +26,8 @@ function Stats() {
           </div>
         </div>
 
-        {/* repeat for graduates, trophies, players */}
+        <div className="h-auto bg-gray-600 w-px hidden xl:block"></div>
+
         <div className="flex items-center gap-2">
           <HiOutlineAcademicCap
             size={30}
@@ -45,6 +45,8 @@ function Stats() {
           </div>
         </div>
 
+        <div className="h-auto bg-gray-600 w-px hidden xl:block"></div>
+
         <div className="flex items-center gap-2">
           <FaTrophy
             size={30}
@@ -61,6 +63,8 @@ function Stats() {
             </span>
           </div>
         </div>
+
+        <div className="h-auto bg-gray-600 w-px hidden xl:block"></div>
 
         <div className="flex items-center gap-2">
           <FaUsers

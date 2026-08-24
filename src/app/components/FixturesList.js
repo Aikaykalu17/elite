@@ -40,7 +40,7 @@ function FixturesList({ fixtures }) {
               onClick={() => setShowAll((prev) => !prev)}
               type="button"
               aria-label="Show fixtures"
-              className="bg-[#061426] text-[#F5B800] text-xs rounded-sm self-center px-6 py-2"
+              className="bg-[#061426] text-[#F5B800] text-xs rounded-sm self-center px-6 py-2 transition-all duration-300 ease-ou hover:bg-[#F5B800] hover:text-[#061426] cursor-pointer"
             >
               {showAll ? "Show less fixtures" : "View more fixtures"}
             </button>

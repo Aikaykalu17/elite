@@ -40,11 +40,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col w-full items-center">
+    <html lang="en" className={`${manrope.variable} antialiased h-full`}>
+      <body className="min-h-screen flex flex-col w-full items-center">
+        <a href="#main-content" className="sr-only focus:not-sr-only">
+          Skip to content
+        </a>
         <HeaderWrapper />
 
-        <main id="main-content" className="w-full ">
+        <main id="main-content" className="w-full flex flex-col flex-1">
           {children}
         </main>
       </body>

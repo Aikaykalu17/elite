@@ -7,7 +7,7 @@ function UpcomingTrial() {
 
   return (
     <section className="bg-white w-full h-full">
-      <div className="w-[90%] mx-auto flex flex-col justify-between  md:grid md:grid-cols-2 gap-4">
+      <div className="w-[90%] mx-auto flex flex-col justify-between  md:grid md:grid-cols-2 gap-4 [@media(orientation:landscape)_and_(max-height:500px)]:grid [@media(orientation:landscape)_and_(max-height:500px)]:grid-cols-2">
         <div className="bg-slate-100  h-auto flex flex-col gap-4 p-6 my-4 rounded-lg">
           <div>
             <h2 className="font-bold">UPCOMING TRIAL</h2>
@@ -43,7 +43,7 @@ function UpcomingTrial() {
                 className="bg-[#F5B800] border border-[#F5B800] text-xs text-black font-semibold px-10 py-3 rounded-md hover:text-[#061426] transition-all duration-300 ease-out hover:translate-y-1 cursor-pointer hover:bg-transparent w-fit inline-flex items-center justify-center"
                 aria-label="Register"
               >
-                REGISTER
+                APPLY FOR A TRIAL
               </Link>
             </article>
           </div>
@@ -79,15 +79,16 @@ function UpcomingTrial() {
             </blockquote>
             <footer className="flex items-center gap-4">
               <Image
-                src="/images/nigerianMother.webp"
-                alt="Mrs. Adewale"
+                src="/images/flore.webp"
+                alt="Mrs. Florence"
                 width={50}
                 height={50}
                 className="rounded-full object-cover w-20 h-20"
+                sizes="500px"
               />
               <div className="flex flex-col items-center">
                 <cite className="text-sm font-bold text-[#061426]">
-                  - Mrs. Adewale
+                  - Mrs. Florence
                 </cite>
                 <p className="text-xs text-gray-600 font-bold">Parent</p>
               </div>
