@@ -67,7 +67,7 @@ export const players = [
     id: 8,
     name: "Ndubuaku Casper",
     category: "Currently Pro",
-    image: "/images/casper.webp",
+    image: "/images/trophycas.webp",
     description:
       "Elite FC All Stars Academy graduate Casper continues his professional journey with AFC Coventry in the UK.",
     league: "Peter Bromwich Premier Division",

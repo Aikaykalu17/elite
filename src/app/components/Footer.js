@@ -108,7 +108,7 @@ function Footer() {
                     href="/form"
                     className="text-white flex items-center text-xs transition-colors duration-300 hover:text-[#F5B800]"
                   >
-                    Apply for a Trial
+                    Trial with us
                   </Link>
                 </li>
                 <li>
