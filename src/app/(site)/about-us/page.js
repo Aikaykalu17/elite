@@ -5,7 +5,7 @@ import Reveal from "../../components/Reveal";
 
 function page() {
   return (
-    <section className="w-full h-full mt-20">
+    <section className="w-full h-full mt-18">
       <div
         className="w-full text-white flex justify-center items-end pb-8 h-52 md:h-[35vh] lg:h-[45vh] bg-cover bg-center"
         style={{

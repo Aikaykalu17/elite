@@ -45,11 +45,11 @@ export default function RootLayout({ children }) {
         <a href="#main-content" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
-        <HeaderWrapper />
+        <header>
+          <HeaderWrapper />
+        </header>
 
-        <main id="main-content" className="w-full flex flex-col flex-1">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
