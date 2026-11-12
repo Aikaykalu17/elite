@@ -82,7 +82,7 @@ const coaches = [
     bio: "Partnerships & Sponsorships Manager responsible for building brand relationships and securing commercial deals. Works to drive revenue and resources that support player development at Elite FC All Stars.",
   },
   {
-    id: 12,
+    id: 13,
     name: "Okebugwu Henry",
     role: "Head of Scouting",
     image: "/images/henry.webp",

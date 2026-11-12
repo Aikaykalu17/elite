@@ -157,6 +157,6 @@ export const players = [
     image: "/images/neto.webp",
     description:
       "Netochukwu Chisom, who emerged from Elite FC All Stars Academy, is a professional player with Avaí FC in Brazil’s Série B.",
-    league: "Serie B, Brazi",
+    league: "Serie B, Brazil",
   },
 ];

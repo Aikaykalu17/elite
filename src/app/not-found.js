@@ -1,20 +1,37 @@
+import { ButtonLink } from "@/components/ui/Button";
+import { navLinks } from "@/lib/site";
 import Link from "next/link";
-import { AlertTriangle } from "lucide-react";
+
+export const metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return (
-    <section className="w-full mt-20 min-h-[60vh] flex flex-col items-center justify-center gap-4 text-center px-4">
-      <AlertTriangle color="red" size={50} aria-hidden="true" />
-      <h1 className="text-gray-300 font-bold text-4xl">404</h1>
-      <p className="text-gray-300 text-sm">
-        Sorry, the page you&apos;re looking for doesn&apos;t exist.
+    <section className="page-wrap pt-36 pb-8 sm:pt-44">
+      <p className="font-display text-display leading-none font-bold text-accent-ink">
+        404
       </p>
-      <Link
-        href="/"
-        className="bg-[#F5B800] text-xs text-black font-semibold px-8 py-3 rounded-md mt-2"
-      >
-        BACK TO HOME
-      </Link>
+      <h1 className="mt-4 font-display text-h1 text-fg">Page not found</h1>
+      <p className="mt-4 max-w-lg text-lg text-muted">
+        That page doesn&rsquo;t exist or has moved. Head back to the home page
+        or pick one of the sections below.
+      </p>
+      <div className="mt-8">
+        <ButtonLink href="/" size="lg">
+          Back to home
+        </ButtonLink>
+      </div>
+      <ul className="mt-12 flex flex-wrap gap-x-6 gap-y-1">
+        {navLinks.map(({ href, label }) => (
+          <li key={href}>
+            <Link
+              href={href}
+              className="inline-flex min-h-11 items-center font-semibold text-fg underline decoration-accent decoration-2 underline-offset-8 transition-colors hover:text-accent-ink"
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
