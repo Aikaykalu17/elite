@@ -54,13 +54,13 @@ export default function AboutPage() {
               Our story
             </h2>
             <p className="mt-5 max-w-lg text-lg text-muted">
-              Elite Football Club All Stars was founded in 2018 with a vision
-              to raise disciplined, skilled and confident young footballers who
+              Elite Football Club All Stars was founded in 2018 with a vision to
+              raise disciplined, skilled and confident young footballers who
               will excel both on and off the pitch. We believe in hard work,
               integrity, teamwork and continuous growth.
             </p>
           </div>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[1.75rem] bg-surface-2">
+          <div className="relative aspect-16/10 overflow-hidden rounded-[1.75rem] bg-surface-2">
             <Image
               src="/images/eliteTrainingEntrance.webp"
               alt="The entrance gate of the Elite FC All Stars training facility."
@@ -78,8 +78,8 @@ export default function AboutPage() {
           <div className="rounded-[1.75rem] border border-line bg-surface p-7 sm:p-9">
             <h2 className="font-display text-h3 text-fg">Our mission</h2>
             <p className="mt-3 text-lg text-muted">
-              To discover and develop young talents into world-class
-              footballers and leaders.
+              To discover and develop young talents into world-class footballers
+              and leaders.
             </p>
           </div>
           <div className="rounded-[1.75rem] border border-line bg-surface p-7 sm:p-9">
@@ -101,7 +101,9 @@ export default function AboutPage() {
             {values.map(({ label, Icon }) => (
               <li key={label} className="border-t-2 border-accent pt-5">
                 <Icon className="size-7 text-fg" aria-hidden="true" />
-                <p className="mt-3 font-display text-h3 font-bold text-fg">{label}</p>
+                <p className="mt-3 font-display text-h3 font-bold text-fg">
+                  {label}
+                </p>
               </li>
             ))}
           </ul>
@@ -116,7 +118,7 @@ export default function AboutPage() {
           <ul className="mt-8 grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-6">
             {facilities.map(({ src, alt, caption }) => (
               <li key={src}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface-2">
+                <div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-surface-2">
                   <Image
                     src={src}
                     alt={alt}

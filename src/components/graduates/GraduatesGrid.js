@@ -47,9 +47,9 @@ export default function GraduatesGrid({ players }) {
         {visible.map((player) => (
           <li
             key={player.id}
-            className="flex flex-col overflow-hidden rounded-[1.5rem] border border-line bg-surface"
+            className="flex flex-col overflow-hidden rounded-3xl border border-line bg-surface"
           >
-            <div className="relative aspect-[4/3] bg-surface-2">
+            <div className="relative aspect-4/3 bg-surface-2">
               <Image
                 src={player.image}
                 alt={`Portrait of ${player.name}`}
